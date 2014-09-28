@@ -10,3 +10,7 @@ A set of TTF/OTF OSS fonts to be used in PDF creation or any other use case.
   <version>1.1.0</version>
 </dependency>
 ```
+
+---
+
+On Twitter: <a href="https://twitter.com/philiphelger">Follow @philiphelger</a>

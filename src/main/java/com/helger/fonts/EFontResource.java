@@ -23,8 +23,9 @@ import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import com.helger.commons.annotations.Nonempty;
-import com.helger.commons.annotations.ReturnsMutableCopy;
+import com.helger.commons.annotation.Nonempty;
+import com.helger.commons.annotation.ReturnsMutableCopy;
+import com.helger.commons.io.IHasInputStream;
 import com.helger.commons.io.resource.ClassPathResource;
 
 /**
@@ -32,7 +33,7 @@ import com.helger.commons.io.resource.ClassPathResource;
  *
  * @author Philip Helger
  */
-public enum EFontResource
+public enum EFontResource implements IHasInputStream
 {
   // Algrey Sans
   ALGREYA_SANS_THIN (EFontType.TTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/ttf/AlegreyaSans/AlegreyaSans-Thin.ttf"),

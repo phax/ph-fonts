@@ -83,7 +83,7 @@
         <configuration>
           <instructions>
             <Export-Package>
-              com.helger.fonts.*
+              com.helger.font.*
             </Export-Package>
             <Import-Package>
               !javax.annotation.*,*

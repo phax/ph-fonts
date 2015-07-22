@@ -23,14 +23,12 @@ import java.util.Set;
 
 import org.junit.Test;
 
-import com.helger.font.EFontResource;
-
 /**
  * Test class for class {@link EFontResource}.
- * 
+ *
  * @author Philip Helger
  */
-public class EFontResourceTest
+public final class EFontResourceTest
 {
   @Test
   public void testBasic ()

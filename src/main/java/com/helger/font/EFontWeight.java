@@ -19,18 +19,23 @@ package com.helger.font;
 import javax.annotation.Nonnegative;
 import javax.annotation.Nullable;
 
-public enum EFontWeight
+/**
+ * Weight of a font.
+ * 
+ * @author Philip Helger
+ */
+public enum EFontWeight implements IFontWeight
 {
-  HAIRLINE (90),
-  THIN (100),
-  EXTRA_LIGHT (200),
-  LIGHT (300),
-  REGULAR (400),
-  MEDIUM (500),
-  SEMI_BOLD (600),
-  BOLD (700),
-  EXTRA_BOLD (800),
-  BLACK (900);
+ HAIRLINE (90),
+ THIN (100),
+ EXTRA_LIGHT (200),
+ LIGHT (300),
+ REGULAR (400),
+ MEDIUM (500),
+ SEMI_BOLD (600),
+ BOLD (700),
+ EXTRA_BOLD (800),
+ BLACK (900);
 
   private final int m_nWeight;
 
@@ -46,13 +51,14 @@ public enum EFontWeight
   }
 
   @Nullable
-  public static EFontWeight getFromWeightOrNull (@Nonnegative final int nWeight)
+  public static IFontWeight getFromWeightOrNull (@Nonnegative final int nWeight)
   {
     return getFromWeightOrDefault (nWeight, null);
   }
 
   @Nullable
-  public static EFontWeight getFromWeightOrDefault (@Nonnegative final int nWeight, @Nullable final EFontWeight eDefault)
+  public static IFontWeight getFromWeightOrDefault (@Nonnegative final int nWeight,
+                                                    @Nullable final IFontWeight eDefault)
   {
     for (final EFontWeight e : values ())
       if (e.getWeight () == nWeight)

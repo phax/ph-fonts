@@ -20,15 +20,19 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.id.IHasID;
 import com.helger.commons.lang.EnumHelper;
 
-public enum EFontStyle implements IHasID <String>
+/**
+ * Predefined font styles
+ * 
+ * @author Philip Helger
+ */
+public enum EFontStyle implements IFontStyle
 {
-  REGULAR ("regular"),
-  BOLD ("bold"),
-  ITALIC ("italic"),
-  BOLD_ITALIC ("bold-italic");
+ REGULAR ("regular"),
+ BOLD ("bold"),
+ ITALIC ("italic"),
+ BOLD_ITALIC ("bold-italic");
 
   private final String m_sID;
 
@@ -60,7 +64,7 @@ public enum EFontStyle implements IHasID <String>
   }
 
   @Nullable
-  public static EFontStyle getFromIDOrNull (@Nullable final String sID)
+  public static IFontStyle getFromIDOrNull (@Nullable final String sID)
   {
     return EnumHelper.getFromIDOrNull (EFontStyle.class, sID);
   }

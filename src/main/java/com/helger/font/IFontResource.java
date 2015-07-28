@@ -17,39 +17,26 @@
 package com.helger.font;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.id.IHasID;
-import com.helger.commons.lang.EnumHelper;
+import com.helger.commons.io.IHasInputStream;
+import com.helger.commons.io.resource.IReadableResource;
 
-/**
- * The file type of the font.
- * 
- * @author Philip Helger
- */
-public enum EFontType implements IHasID <String>
+public interface IFontResource extends IHasInputStream
 {
- OTF ("otf"),
- TTF ("ttf");
+  @Nonnull
+  EFontType getFontType ();
 
-  private final String m_sID;
+  @Nonnull
+  IFontStyle getFontStyle ();
 
-  private EFontType (@Nonnull @Nonempty final String sID)
-  {
-    m_sID = sID;
-  }
+  @Nonnull
+  IFontWeight getFontWeight ();
 
   @Nonnull
   @Nonempty
-  public String getID ()
-  {
-    return m_sID;
-  }
+  String getPath ();
 
-  @Nullable
-  public static EFontType getFromIDOrNull (@Nullable final String sID)
-  {
-    return EnumHelper.getFromIDOrNull (EFontType.class, sID);
-  }
+  @Nonnull
+  IReadableResource getResource ();
 }

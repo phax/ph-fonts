@@ -25,7 +25,7 @@
     <version>1.4.0</version>
   </parent>
   <artifactId>ph-fonts</artifactId>
-  <version>2.0.0</version>
+  <version>2.0.1-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>ph-fonts</name>
   <description>Contains OSS fonts</description>
@@ -44,7 +44,7 @@
     <connection>scm:git:git@github.com:phax/ph-fonts.git</connection>
     <developerConnection>scm:git:git@github.com:phax/ph-fonts.git</developerConnection>
     <url>http://github.com/phax/ph-fonts</url>
-    <tag>ph-fonts-2.0.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <organization>

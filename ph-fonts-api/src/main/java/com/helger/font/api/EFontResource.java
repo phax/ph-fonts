@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.font;
+package com.helger.font.api;
 
 import java.io.InputStream;
 import java.util.EnumSet;
@@ -103,67 +103,59 @@ public enum EFontResource implements IFontResource
   ROBOTO_BLACK ("Roboto", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BLACK, "fonts/ttf/Roboto/Roboto-Black.ttf"),
   ROBOTO_BLACK_ITALIC ("Roboto", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.BLACK, "fonts/ttf/Roboto/Roboto-BlackItalic.ttf");
 
-  private final String m_sFontName;
-  private final EFontType m_eFontType;
-  private final IFontStyle m_eFontStyle;
-  private final IFontWeight m_eWeight;
-  private final String m_sPath;
+  private final FontResource m_aRes;
 
   private EFontResource (@Nonnull @Nonempty final String sFontName,
                          @Nonnull final EFontType eFontType,
-                         @Nonnull final IFontStyle eFontStyle,
-                         @Nonnull final IFontWeight eWeight,
+                         @Nonnull final IFontStyle aFontStyle,
+                         @Nonnull final IFontWeight aFontWeight,
                          @Nonnull @Nonempty final String sPath)
   {
-    m_sFontName = sFontName;
-    m_eFontType = eFontType;
-    m_eFontStyle = eFontStyle;
-    m_eWeight = eWeight;
-    m_sPath = sPath;
+    m_aRes = new FontResource (sFontName, eFontType, aFontStyle, aFontWeight, sPath);
   }
 
   @Nonnull
   @Nonempty
   public String getFontName ()
   {
-    return m_sFontName;
+    return m_aRes.getFontName ();
   }
 
   @Nonnull
   public EFontType getFontType ()
   {
-    return m_eFontType;
+    return m_aRes.getFontType ();
   }
 
   @Nonnull
   public IFontStyle getFontStyle ()
   {
-    return m_eFontStyle;
+    return m_aRes.getFontStyle ();
   }
 
   @Nonnull
   public IFontWeight getFontWeight ()
   {
-    return m_eWeight;
+    return m_aRes.getFontWeight ();
   }
 
   @Nonnull
   @Nonempty
   public String getPath ()
   {
-    return m_sPath;
+    return m_aRes.getPath ();
   }
 
   @Nonnull
   public ClassPathResource getResource ()
   {
-    return new ClassPathResource (m_sPath);
+    return m_aRes.getResource ();
   }
 
   @Nonnull
   public InputStream getInputStream ()
   {
-    return ClassPathResource.getInputStream (m_sPath);
+    return m_aRes.getInputStream ();
   }
 
   @Nonnull

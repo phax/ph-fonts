@@ -14,30 +14,42 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.font;
+package com.helger.font.api;
 
-import static org.junit.Assert.assertTrue;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import org.junit.Test;
+import com.helger.commons.annotation.Nonempty;
+import com.helger.commons.id.IHasID;
+import com.helger.commons.lang.EnumHelper;
 
 /**
- * Test class for class {@link EFontResource}.
+ * The file type of the font.
  *
  * @author Philip Helger
  */
-public final class EFontResourceTest
+public enum EFontType implements IHasID <String>
 {
-  @Test
-  public void testBasic ()
+  OTF ("otf"),
+  TTF ("ttf");
+
+  private final String m_sID;
+
+  private EFontType (@Nonnull @Nonempty final String sID)
   {
-    final Set <String> aUniquePaths = new HashSet <String> ();
-    for (final EFontResource e : EFontResource.values ())
-    {
-      assertTrue (e.name (), e.getResource ().exists ());
-      assertTrue (e.name (), aUniquePaths.add (e.getResource ().getPath ()));
-    }
+    m_sID = sID;
+  }
+
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
+  }
+
+  @Nullable
+  public static EFontType getFromIDOrNull (@Nullable final String sID)
+  {
+    return EnumHelper.getFromIDOrNull (EFontType.class, sID);
   }
 }

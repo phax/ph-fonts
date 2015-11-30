@@ -14,42 +14,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.font;
+package com.helger.font.api;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import java.io.Serializable;
 
-import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.id.IHasID;
-import com.helger.commons.lang.EnumHelper;
+import javax.annotation.Nonnegative;
 
 /**
- * The file type of the font.
+ * Font weight base interface.
  *
  * @author Philip Helger
  */
-public enum EFontType implements IHasID <String>
+public interface IFontWeight extends Serializable
 {
-  OTF ("otf"),
-  TTF ("ttf");
-
-  private final String m_sID;
-
-  private EFontType (@Nonnull @Nonempty final String sID)
-  {
-    m_sID = sID;
-  }
-
-  @Nonnull
-  @Nonempty
-  public String getID ()
-  {
-    return m_sID;
-  }
-
-  @Nullable
-  public static EFontType getFromIDOrNull (@Nullable final String sID)
-  {
-    return EnumHelper.getFromIDOrNull (EFontType.class, sID);
-  }
+  /**
+   * @return The weight. E.g. 100 is thin and 900 is black.
+   */
+  @Nonnegative
+  int getWeight ();
 }

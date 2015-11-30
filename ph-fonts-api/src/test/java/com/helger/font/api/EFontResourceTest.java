@@ -14,22 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.font;
+package com.helger.font.api;
 
-import java.io.Serializable;
+import static org.junit.Assert.assertTrue;
 
-import javax.annotation.Nonnegative;
+import java.util.HashSet;
+import java.util.Set;
+
+import org.junit.Test;
+
+import com.helger.font.api.EFontResource;
 
 /**
- * Font weight base interface.
+ * Test class for class {@link EFontResource}.
  *
  * @author Philip Helger
  */
-public interface IFontWeight extends Serializable
+public final class EFontResourceTest
 {
-  /**
-   * @return The weight. E.g. 100 is thin and 900 is black.
-   */
-  @Nonnegative
-  int getWeight ();
+  @Test
+  public void testBasic ()
+  {
+    final Set <String> aUniquePaths = new HashSet <String> ();
+    for (final EFontResource e : EFontResource.values ())
+    {
+      assertTrue (e.name (), e.getResource ().exists ());
+      assertTrue (e.name (), aUniquePaths.add (e.getResource ().getPath ()));
+    }
+  }
 }

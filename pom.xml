@@ -96,6 +96,11 @@
         <artifactId>ph-fonts-lato2</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <groupId>com.helger</groupId>
+        <artifactId>ph-fonts-roboto</artifactId>
+        <version>${project.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -119,5 +124,6 @@
     <module>ph-fonts-anaheim</module>
     <module>ph-fonts-exo2</module>
     <module>ph-fonts-lato2</module>
+    <module>ph-fonts-roboto</module>
   </modules>
 </project>

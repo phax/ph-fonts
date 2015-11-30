@@ -14,11 +14,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.font.api;
+package com.helger.font.roboto;
 
 import javax.annotation.Nonnull;
 
 import com.helger.commons.annotation.Nonempty;
+import com.helger.font.api.EFontStyle;
+import com.helger.font.api.EFontType;
+import com.helger.font.api.EFontWeight;
+import com.helger.font.api.FontResource;
+import com.helger.font.api.IFontResource;
+import com.helger.font.api.IFontStyle;
+import com.helger.font.api.IFontWeight;
 
 /**
  * Defines the available font resources available in this library.

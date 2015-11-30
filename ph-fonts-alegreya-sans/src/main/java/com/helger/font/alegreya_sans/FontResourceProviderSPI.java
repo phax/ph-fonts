@@ -1,4 +1,4 @@
-package com.helger.font.alegrya_sans;
+package com.helger.font.alegreya_sans;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.font.alegrya_sans;
+package com.helger.font.alegreya_sans;
 
 import javax.annotation.Nonnull;
 

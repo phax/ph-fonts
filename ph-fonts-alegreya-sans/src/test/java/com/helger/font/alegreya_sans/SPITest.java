@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2014-2015 Philip Helger (www.helger.com)
+ * Copyright (C) 2015 Philip Helger (www.helger.com)
  * philip[at]helger[dot]com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,32 +14,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.font.api;
-
-import static org.junit.Assert.assertTrue;
-
-import java.util.HashSet;
-import java.util.Set;
+package com.helger.font.alegreya_sans;
 
 import org.junit.Test;
 
-import com.helger.font.alegrya_sans.EFontResource;
+import com.helger.commons.mock.CommonsTestHelper;
 
 /**
- * Test class for class {@link EFontResource}.
+ * Test all SPI definitions.
  *
  * @author Philip Helger
  */
-public final class EFontResourceTest
+public final class SPITest
 {
   @Test
-  public void testBasic ()
+  public void testBasic () throws Exception
   {
-    final Set <String> aUniquePaths = new HashSet <String> ();
-    for (final EFontResource e : EFontResource.values ())
-    {
-      assertTrue (e.name (), e.getFontResource ().getResource ().exists ());
-      assertTrue (e.name (), aUniquePaths.add (e.getFontResource ().getResource ().getPath ()));
-    }
+    CommonsTestHelper.testIfAllSPIImplementationsAreValid ();
   }
 }

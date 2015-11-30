@@ -74,7 +74,7 @@
         <configuration>
           <instructions>
             <Export-Package>
-              com.helger.font.alegreya_sans.*
+              com.helger.font.anaheim.*
             </Export-Package>
             <Import-Package>
               !javax.annotation.*,*

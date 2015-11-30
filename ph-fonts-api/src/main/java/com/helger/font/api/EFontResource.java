@@ -27,23 +27,6 @@ import com.helger.commons.annotation.Nonempty;
  */
 public enum EFontResource
 {
-  // Algrey Sans (SIL Open Font License, 1.1)
-  ALGREYA_SANS_THIN ("Algrey Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/ttf/AlegreyaSans/AlegreyaSans-Thin.ttf"),
-  ALGREYA_SANS_THIN_ITALIC ("Algrey Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.THIN, "fonts/ttf/AlegreyaSans/AlegreyaSans-ThinItalic.ttf"),
-  ALGREYA_SANS_LIGHT ("Algrey Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.LIGHT, "fonts/ttf/AlegreyaSans/AlegreyaSans-Light.ttf"),
-  ALGREYA_SANS_LIGHT_ITALIC ("Algrey Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.LIGHT, "fonts/ttf/AlegreyaSans/AlegreyaSans-LightItalic.ttf"),
-  ALGREYA_SANS_NORMAL ("Algrey Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.REGULAR, "fonts/ttf/AlegreyaSans/AlegreyaSans-Regular.ttf"),
-  ALGREYA_SANS_NORMAL_ITALIC ("Algrey Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.REGULAR, "fonts/ttf/AlegreyaSans/AlegreyaSans-Italic.ttf"),
-  ALGREYA_SANS_MEDIUM ("Algrey Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.MEDIUM, "fonts/ttf/AlegreyaSans/AlegreyaSans-Medium.ttf"),
-  ALGREYA_SANS_MEDIUM_ITALIC ("Algrey Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.MEDIUM, "fonts/ttf/AlegreyaSans/AlegreyaSans-MediumItalic.ttf"),
-  ALGREYA_SANS_BOLD ("Algrey Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BOLD, "fonts/ttf/AlegreyaSans/AlegreyaSans-Bold.ttf"),
-  ALGREYA_SANS_BOLD_ITALIC ("Algrey Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.BOLD, "fonts/ttf/AlegreyaSans/AlegreyaSans-BoldItalic.ttf"),
-  ALGREYA_SANS_EXTRA_BOLD ("Algrey Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.EXTRA_BOLD, "fonts/ttf/AlegreyaSans/AlegreyaSans-ExtraBold.ttf"),
-  ALGREYA_SANS_EXTRA_BOLD_ITALIC ("Algrey Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.EXTRA_BOLD, "fonts/ttf/AlegreyaSans/AlegreyaSans-ExtraBoldItalic.ttf"),
-  ALGREYA_SANS_BLACK ("Algrey Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BLACK, "fonts/ttf/AlegreyaSans/AlegreyaSans-Black.ttf"),
-  ALGREYA_SANS_BLACK_ITALIC ("Algrey Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.BLACK, "fonts/ttf/AlegreyaSans/AlegreyaSans-BlackItalic.ttf"),
-  // Anaheim (SIL Open Font License, 1.1)
-  ANAHEIM_REGULAR ("Anaheim", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.REGULAR, "fonts/ttf/Anaheim/Anaheim-Regular.ttf"),
   // Lato2 (SIL Open Font License 1.1)
   LATO2_HAIRLINE ("Lato2", EFontType.OTF, EFontStyle.REGULAR, EFontWeight.HAIRLINE, "fonts/ttf/Lato2/Lato-Hairline.ttf"),
   LATO2_HAIRLINE_ITALIC ("Lato2", EFontType.OTF, EFontStyle.ITALIC, EFontWeight.HAIRLINE, "fonts/ttf/Lato2/Lato-HairlineItalic.ttf"),

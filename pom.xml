@@ -81,6 +81,11 @@
         <artifactId>ph-fonts-alegreya-sans</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <groupId>com.helger</groupId>
+        <artifactId>ph-fonts-anaheim</artifactId>
+        <version>${project.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -99,6 +104,8 @@
   
   <modules>
     <module>ph-fonts-api</module>
+    <!-- The fonts: -->
     <module>ph-fonts-alegreya-sans</module>
+    <module>ph-fonts-anaheim</module>
   </modules>
 </project>

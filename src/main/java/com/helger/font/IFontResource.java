@@ -16,14 +16,24 @@
  */
 package com.helger.font;
 
+import java.io.Serializable;
+
 import javax.annotation.Nonnull;
 
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.io.IHasInputStream;
 import com.helger.commons.io.resource.IReadableResource;
 
-public interface IFontResource extends IHasInputStream
+/**
+ * Base interface for a single font resource.
+ * 
+ * @author Philip Helger
+ */
+public interface IFontResource extends IHasInputStream, Serializable
 {
+  /**
+   * @return The type of font (otf, ttf, ...)
+   */
   @Nonnull
   EFontType getFontType ();
 

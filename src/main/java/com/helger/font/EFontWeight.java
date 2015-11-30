@@ -20,22 +20,22 @@ import javax.annotation.Nonnegative;
 import javax.annotation.Nullable;
 
 /**
- * Weight of a font.
- * 
+ * Weight of a font. Default values.
+ *
  * @author Philip Helger
  */
 public enum EFontWeight implements IFontWeight
 {
- HAIRLINE (90),
- THIN (100),
- EXTRA_LIGHT (200),
- LIGHT (300),
- REGULAR (400),
- MEDIUM (500),
- SEMI_BOLD (600),
- BOLD (700),
- EXTRA_BOLD (800),
- BLACK (900);
+  HAIRLINE (90),
+  THIN (100),
+  EXTRA_LIGHT (200),
+  LIGHT (300),
+  REGULAR (400),
+  MEDIUM (500),
+  SEMI_BOLD (600),
+  BOLD (700),
+  EXTRA_BOLD (800),
+  BLACK (900);
 
   private final int m_nWeight;
 

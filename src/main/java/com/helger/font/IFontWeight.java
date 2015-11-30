@@ -16,6 +16,8 @@
  */
 package com.helger.font;
 
+import java.io.Serializable;
+
 import javax.annotation.Nonnegative;
 
 /**
@@ -23,7 +25,7 @@ import javax.annotation.Nonnegative;
  *
  * @author Philip Helger
  */
-public interface IFontWeight
+public interface IFontWeight extends Serializable
 {
   /**
    * @return The weight. E.g. 100 is thin and 900 is black.

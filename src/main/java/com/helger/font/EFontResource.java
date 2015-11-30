@@ -34,68 +34,71 @@ import com.helger.commons.io.resource.ClassPathResource;
  */
 public enum EFontResource implements IFontResource
 {
- // Algrey Sans
- ALGREYA_SANS_THIN (EFontType.TTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/ttf/AlegreyaSans/AlegreyaSans-Thin.ttf"),
- ALGREYA_SANS_THIN_ITALIC (EFontType.TTF, EFontStyle.ITALIC, EFontWeight.THIN, "fonts/ttf/AlegreyaSans/AlegreyaSans-ThinItalic.ttf"),
- ALGREYA_SANS_LIGHT (EFontType.TTF, EFontStyle.REGULAR, EFontWeight.LIGHT, "fonts/ttf/AlegreyaSans/AlegreyaSans-Light.ttf"),
- ALGREYA_SANS_LIGHT_ITALIC (EFontType.TTF, EFontStyle.ITALIC, EFontWeight.LIGHT, "fonts/ttf/AlegreyaSans/AlegreyaSans-LightItalic.ttf"),
- ALGREYA_SANS_NORMAL (EFontType.TTF, EFontStyle.REGULAR, EFontWeight.REGULAR, "fonts/ttf/AlegreyaSans/AlegreyaSans-Regular.ttf"),
- ALGREYA_SANS_NORMAL_ITALIC (EFontType.TTF, EFontStyle.ITALIC, EFontWeight.REGULAR, "fonts/ttf/AlegreyaSans/AlegreyaSans-Italic.ttf"),
- ALGREYA_SANS_MEDIUM (EFontType.TTF, EFontStyle.REGULAR, EFontWeight.MEDIUM, "fonts/ttf/AlegreyaSans/AlegreyaSans-Medium.ttf"),
- ALGREYA_SANS_MEDIUM_ITALIC (EFontType.TTF, EFontStyle.ITALIC, EFontWeight.MEDIUM, "fonts/ttf/AlegreyaSans/AlegreyaSans-MediumItalic.ttf"),
- ALGREYA_SANS_BOLD (EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BOLD, "fonts/ttf/AlegreyaSans/AlegreyaSans-Bold.ttf"),
- ALGREYA_SANS_BOLD_ITALIC (EFontType.TTF, EFontStyle.ITALIC, EFontWeight.BOLD, "fonts/ttf/AlegreyaSans/AlegreyaSans-BoldItalic.ttf"),
- ALGREYA_SANS_EXTRA_BOLD (EFontType.TTF, EFontStyle.REGULAR, EFontWeight.EXTRA_BOLD, "fonts/ttf/AlegreyaSans/AlegreyaSans-ExtraBold.ttf"),
- ALGREYA_SANS_EXTRA_BOLD_ITALIC (EFontType.TTF, EFontStyle.ITALIC, EFontWeight.EXTRA_BOLD, "fonts/ttf/AlegreyaSans/AlegreyaSans-ExtraBoldItalic.ttf"),
- ALGREYA_SANS_BLACK (EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BLACK, "fonts/ttf/AlegreyaSans/AlegreyaSans-Black.ttf"),
- ALGREYA_SANS_BLACK_ITALIC (EFontType.TTF, EFontStyle.ITALIC, EFontWeight.BLACK, "fonts/ttf/AlegreyaSans/AlegreyaSans-BlackItalic.ttf"),
- // Anaheim Regular
- ANAHEIM_REGULAR (EFontType.TTF, EFontStyle.REGULAR, EFontWeight.REGULAR, "fonts/ttf/Anaheim/Anaheim-Regular.ttf"),
- // Lato2
- LATO2_HAIRLINE (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.HAIRLINE, "fonts/ttf/Lato2/Lato-Hairline.ttf"),
- LATO2_HAIRLINE_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.HAIRLINE, "fonts/ttf/Lato2/Lato-HairlineItalic.ttf"),
- LATO2_THIN (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/ttf/Lato2/Lato-Thin.ttf"),
- LATO2_THIN_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.THIN, "fonts/ttf/Lato2/Lato-ThinItalic.ttf"),
- LATO2_LIGHT (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.LIGHT, "fonts/ttf/Lato2/Lato-Light.ttf"),
- LATO2_LIGHT_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.LIGHT, "fonts/ttf/Lato2/Lato-LightItalic.ttf"),
- LATO2_NORMAL (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.REGULAR, "fonts/ttf/Lato2/Lato-Regular.ttf"),
- LATO2_NORMAL_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.REGULAR, "fonts/ttf/Lato2/Lato-Italic.ttf"),
- LATO2_MEDIUM (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.MEDIUM, "fonts/ttf/Lato2/Lato-Medium.ttf"),
- LATO2_MEDIUM_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.MEDIUM, "fonts/ttf/Lato2/Lato-MediumItalic.ttf"),
- LATO2_SEMI_BOLD (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.SEMI_BOLD, "fonts/ttf/Lato2/Lato-Semibold.ttf"),
- LATO2_SEMI_BOLD_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.SEMI_BOLD, "fonts/ttf/Lato2/Lato-SemiboldItalic.ttf"),
- LATO2_BOLD (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.BOLD, "fonts/ttf/Lato2/Lato-Bold.ttf"),
- LATO2_BOLD_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.BOLD, "fonts/ttf/Lato2/Lato-BoldItalic.ttf"),
- LATO2_HEAVY (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.EXTRA_BOLD, "fonts/ttf/Lato2/Lato-Heavy.ttf"),
- LATO2_HEAVY_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.EXTRA_BOLD, "fonts/ttf/Lato2/Lato-HeavyItalic.ttf"),
- LATO2_BLACK (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.BLACK, "fonts/ttf/Lato2/Lato-Black.ttf"),
- LATO2_BLACK_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.BLACK, "fonts/ttf/Lato2/Lato-BlackItalic.ttf"),
- // Exo 2.0
- EXO2_THIN (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/ttf/Exo2/Exo2.0-Thin.otf"),
- EXO2_THIN_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.THIN, "fonts/ttf/Exo2/Exo2.0-ThinItalic.otf"),
- EXO2_EXTRA_LIGHT (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.EXTRA_LIGHT, "fonts/ttf/Exo2/Exo2.0-ExtraLight.otf"),
- EXO2_EXTRA_LIGHT_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.EXTRA_LIGHT, "fonts/ttf/Exo2/Exo2.0-ExtraLightItalic.otf"),
- EXO2_LIGHT (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.LIGHT, "fonts/ttf/Exo2/Exo2.0-Light.otf"),
- EXO2_LIGHT_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.LIGHT, "fonts/ttf/Exo2/Exo2.0-LightItalic.otf"),
- EXO2_NORMAL (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.REGULAR, "fonts/ttf/Exo2/Exo2.0-Regular.otf"),
- EXO2_NORMAL_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.REGULAR, "fonts/ttf/Exo2/Exo2.0-Italic.otf"),
- EXO2_MEDIUM (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.MEDIUM, "fonts/ttf/Exo2/Exo2.0-Medium.otf"),
- EXO2_MEDIUM_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.MEDIUM, "fonts/ttf/Exo2/Exo2.0-MediumItalic.otf"),
- EXO2_SEMI_BOLD (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.SEMI_BOLD, "fonts/ttf/Exo2/Exo2.0-SemiBold.otf"),
- EXO2_SEMI_BOLD_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.SEMI_BOLD, "fonts/ttf/Exo2/Exo2.0-SemiBoldItalic.otf"),
- EXO2_BOLD (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.BOLD, "fonts/ttf/Exo2/Exo2.0-Bold.otf"),
- EXO2_BOLD_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.BOLD, "fonts/ttf/Exo2/Exo2.0-BoldItalic.otf"),
- EXO2_EXTRA_BOLD (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.EXTRA_BOLD, "fonts/ttf/Exo2/Exo2.0-ExtraBold.otf"),
- EXO2_EXTRA_BOLD_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.EXTRA_BOLD, "fonts/ttf/Exo2/Exo2.0-ExtraBoldItalic.otf"),
- EXO2_BLACK (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.BLACK, "fonts/ttf/Exo2/Exo2.0-Black.otf"),
- EXO2_BLACK_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.BLACK, "fonts/ttf/Exo2/Exo2.0-BlackItalic.otf");
+  // Algrey Sans (SIL Open Font License, 1.1)
+  ALGREYA_SANS_THIN (EFontType.TTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/ttf/AlegreyaSans/AlegreyaSans-Thin.ttf"),
+  ALGREYA_SANS_THIN_ITALIC (EFontType.TTF, EFontStyle.ITALIC, EFontWeight.THIN, "fonts/ttf/AlegreyaSans/AlegreyaSans-ThinItalic.ttf"),
+  ALGREYA_SANS_LIGHT (EFontType.TTF, EFontStyle.REGULAR, EFontWeight.LIGHT, "fonts/ttf/AlegreyaSans/AlegreyaSans-Light.ttf"),
+  ALGREYA_SANS_LIGHT_ITALIC (EFontType.TTF, EFontStyle.ITALIC, EFontWeight.LIGHT, "fonts/ttf/AlegreyaSans/AlegreyaSans-LightItalic.ttf"),
+  ALGREYA_SANS_NORMAL (EFontType.TTF, EFontStyle.REGULAR, EFontWeight.REGULAR, "fonts/ttf/AlegreyaSans/AlegreyaSans-Regular.ttf"),
+  ALGREYA_SANS_NORMAL_ITALIC (EFontType.TTF, EFontStyle.ITALIC, EFontWeight.REGULAR, "fonts/ttf/AlegreyaSans/AlegreyaSans-Italic.ttf"),
+  ALGREYA_SANS_MEDIUM (EFontType.TTF, EFontStyle.REGULAR, EFontWeight.MEDIUM, "fonts/ttf/AlegreyaSans/AlegreyaSans-Medium.ttf"),
+  ALGREYA_SANS_MEDIUM_ITALIC (EFontType.TTF, EFontStyle.ITALIC, EFontWeight.MEDIUM, "fonts/ttf/AlegreyaSans/AlegreyaSans-MediumItalic.ttf"),
+  ALGREYA_SANS_BOLD (EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BOLD, "fonts/ttf/AlegreyaSans/AlegreyaSans-Bold.ttf"),
+  ALGREYA_SANS_BOLD_ITALIC (EFontType.TTF, EFontStyle.ITALIC, EFontWeight.BOLD, "fonts/ttf/AlegreyaSans/AlegreyaSans-BoldItalic.ttf"),
+  ALGREYA_SANS_EXTRA_BOLD (EFontType.TTF, EFontStyle.REGULAR, EFontWeight.EXTRA_BOLD, "fonts/ttf/AlegreyaSans/AlegreyaSans-ExtraBold.ttf"),
+  ALGREYA_SANS_EXTRA_BOLD_ITALIC (EFontType.TTF, EFontStyle.ITALIC, EFontWeight.EXTRA_BOLD, "fonts/ttf/AlegreyaSans/AlegreyaSans-ExtraBoldItalic.ttf"),
+  ALGREYA_SANS_BLACK (EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BLACK, "fonts/ttf/AlegreyaSans/AlegreyaSans-Black.ttf"),
+  ALGREYA_SANS_BLACK_ITALIC (EFontType.TTF, EFontStyle.ITALIC, EFontWeight.BLACK, "fonts/ttf/AlegreyaSans/AlegreyaSans-BlackItalic.ttf"),
+  // Anaheim Regular (SIL Open Font License, 1.1)
+  ANAHEIM_REGULAR (EFontType.TTF, EFontStyle.REGULAR, EFontWeight.REGULAR, "fonts/ttf/Anaheim/Anaheim-Regular.ttf"),
+  // Lato2 (SIL Open Font License 1.1)
+  LATO2_HAIRLINE (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.HAIRLINE, "fonts/ttf/Lato2/Lato-Hairline.ttf"),
+  LATO2_HAIRLINE_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.HAIRLINE, "fonts/ttf/Lato2/Lato-HairlineItalic.ttf"),
+  LATO2_THIN (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/ttf/Lato2/Lato-Thin.ttf"),
+  LATO2_THIN_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.THIN, "fonts/ttf/Lato2/Lato-ThinItalic.ttf"),
+  LATO2_LIGHT (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.LIGHT, "fonts/ttf/Lato2/Lato-Light.ttf"),
+  LATO2_LIGHT_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.LIGHT, "fonts/ttf/Lato2/Lato-LightItalic.ttf"),
+  LATO2_NORMAL (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.REGULAR, "fonts/ttf/Lato2/Lato-Regular.ttf"),
+  LATO2_NORMAL_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.REGULAR, "fonts/ttf/Lato2/Lato-Italic.ttf"),
+  LATO2_MEDIUM (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.MEDIUM, "fonts/ttf/Lato2/Lato-Medium.ttf"),
+  LATO2_MEDIUM_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.MEDIUM, "fonts/ttf/Lato2/Lato-MediumItalic.ttf"),
+  LATO2_SEMI_BOLD (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.SEMI_BOLD, "fonts/ttf/Lato2/Lato-Semibold.ttf"),
+  LATO2_SEMI_BOLD_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.SEMI_BOLD, "fonts/ttf/Lato2/Lato-SemiboldItalic.ttf"),
+  LATO2_BOLD (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.BOLD, "fonts/ttf/Lato2/Lato-Bold.ttf"),
+  LATO2_BOLD_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.BOLD, "fonts/ttf/Lato2/Lato-BoldItalic.ttf"),
+  LATO2_HEAVY (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.EXTRA_BOLD, "fonts/ttf/Lato2/Lato-Heavy.ttf"),
+  LATO2_HEAVY_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.EXTRA_BOLD, "fonts/ttf/Lato2/Lato-HeavyItalic.ttf"),
+  LATO2_BLACK (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.BLACK, "fonts/ttf/Lato2/Lato-Black.ttf"),
+  LATO2_BLACK_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.BLACK, "fonts/ttf/Lato2/Lato-BlackItalic.ttf"),
+  // Exo 2.0 (SIL Open Font License, 1.1)
+  EXO2_THIN (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/ttf/Exo2/Exo2.0-Thin.otf"),
+  EXO2_THIN_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.THIN, "fonts/ttf/Exo2/Exo2.0-ThinItalic.otf"),
+  EXO2_EXTRA_LIGHT (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.EXTRA_LIGHT, "fonts/ttf/Exo2/Exo2.0-ExtraLight.otf"),
+  EXO2_EXTRA_LIGHT_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.EXTRA_LIGHT, "fonts/ttf/Exo2/Exo2.0-ExtraLightItalic.otf"),
+  EXO2_LIGHT (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.LIGHT, "fonts/ttf/Exo2/Exo2.0-Light.otf"),
+  EXO2_LIGHT_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.LIGHT, "fonts/ttf/Exo2/Exo2.0-LightItalic.otf"),
+  EXO2_NORMAL (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.REGULAR, "fonts/ttf/Exo2/Exo2.0-Regular.otf"),
+  EXO2_NORMAL_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.REGULAR, "fonts/ttf/Exo2/Exo2.0-Italic.otf"),
+  EXO2_MEDIUM (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.MEDIUM, "fonts/ttf/Exo2/Exo2.0-Medium.otf"),
+  EXO2_MEDIUM_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.MEDIUM, "fonts/ttf/Exo2/Exo2.0-MediumItalic.otf"),
+  EXO2_SEMI_BOLD (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.SEMI_BOLD, "fonts/ttf/Exo2/Exo2.0-SemiBold.otf"),
+  EXO2_SEMI_BOLD_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.SEMI_BOLD, "fonts/ttf/Exo2/Exo2.0-SemiBoldItalic.otf"),
+  EXO2_BOLD (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.BOLD, "fonts/ttf/Exo2/Exo2.0-Bold.otf"),
+  EXO2_BOLD_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.BOLD, "fonts/ttf/Exo2/Exo2.0-BoldItalic.otf"),
+  EXO2_EXTRA_BOLD (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.EXTRA_BOLD, "fonts/ttf/Exo2/Exo2.0-ExtraBold.otf"),
+  EXO2_EXTRA_BOLD_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.EXTRA_BOLD, "fonts/ttf/Exo2/Exo2.0-ExtraBoldItalic.otf"),
+  EXO2_BLACK (EFontType.OTF, EFontStyle.REGULAR, EFontWeight.BLACK, "fonts/ttf/Exo2/Exo2.0-Black.otf"),
+  EXO2_BLACK_ITALIC (EFontType.OTF, EFontStyle.ITALIC, EFontWeight.BLACK, "fonts/ttf/Exo2/Exo2.0-BlackItalic.otf");
 
   private final EFontType m_eFontType;
   private final IFontStyle m_eFontStyle;
   private final IFontWeight m_eWeight;
   private final String m_sPath;
 
-  private EFontResource (@Nonnull final EFontType eFontType, @Nonnull final IFontStyle eFontStyle, @Nonnull final IFontWeight eWeight, @Nonnull @Nonempty final String sPath)
+  private EFontResource (@Nonnull final EFontType eFontType,
+                         @Nonnull final IFontStyle eFontStyle,
+                         @Nonnull final IFontWeight eWeight,
+                         @Nonnull @Nonempty final String sPath)
   {
     m_eFontType = eFontType;
     m_eFontStyle = eFontStyle;

@@ -23,16 +23,16 @@ import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.lang.EnumHelper;
 
 /**
- * Predefined font styles
- * 
+ * Predefined font styles.
+ *
  * @author Philip Helger
  */
 public enum EFontStyle implements IFontStyle
 {
- REGULAR ("regular"),
- BOLD ("bold"),
- ITALIC ("italic"),
- BOLD_ITALIC ("bold-italic");
+  REGULAR ("regular"),
+  BOLD ("bold"),
+  ITALIC ("italic"),
+  BOLD_ITALIC ("bold-italic");
 
   private final String m_sID;
 

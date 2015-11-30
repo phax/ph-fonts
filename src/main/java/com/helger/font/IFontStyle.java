@@ -16,18 +16,30 @@
  */
 package com.helger.font;
 
+import java.io.Serializable;
+
 import com.helger.commons.id.IHasID;
 
 /**
  * Base interface for a font style.
- * 
+ *
  * @author Philip Helger
  */
-public interface IFontStyle extends IHasID <String>
+public interface IFontStyle extends IHasID <String>, Serializable
 {
+  /**
+   * @return <code>true</code> if it is regular, <code>false</code> if not (if
+   *         it is bold or italic).
+   */
   boolean isRegular ();
 
+  /**
+   * @return <code>true</code> if it is bold, <code>false</code> if not.
+   */
   boolean isBold ();
 
+  /**
+   * @return <code>true</code> if it is italic, <code>false</code> if not.
+   */
   boolean isItalic ();
 }

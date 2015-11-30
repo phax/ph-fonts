@@ -25,13 +25,13 @@ import com.helger.commons.lang.EnumHelper;
 
 /**
  * The file type of the font.
- * 
+ *
  * @author Philip Helger
  */
 public enum EFontType implements IHasID <String>
 {
- OTF ("otf"),
- TTF ("ttf");
+  OTF ("otf"),
+  TTF ("ttf");
 
   private final String m_sID;
 

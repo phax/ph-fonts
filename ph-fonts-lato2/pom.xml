@@ -24,11 +24,11 @@
     <artifactId>ph-fonts-parent-pom</artifactId>
     <version>2.1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>ph-fonts-anaheim</artifactId>
+  <artifactId>ph-fonts-lato2</artifactId>
   <packaging>bundle</packaging>
-  <name>ph-fonts-anaheim</name>
-  <description>Anaheim font</description>
-  <url>https://github.com/phax/ph-fonts/ph-fonts-anaheim</url>
+  <name>ph-fonts-lato2</name>
+  <description>Laot2 font</description>
+  <url>https://github.com/phax/ph-fonts/ph-fonts-lato2</url>
   <inceptionYear>2014</inceptionYear>
   
   <licenses>
@@ -74,7 +74,7 @@
         <configuration>
           <instructions>
             <Export-Package>
-              com.helger.font.anaheim.*
+              com.helger.font.lato2.*
             </Export-Package>
             <Import-Package>
               !javax.annotation.*,*

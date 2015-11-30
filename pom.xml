@@ -76,6 +76,11 @@
         <artifactId>ph-fonts-api</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <groupId>com.helger</groupId>
+        <artifactId>ph-fonts-alegreya-sans</artifactId>
+        <version>${project.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -94,5 +99,6 @@
   
   <modules>
     <module>ph-fonts-api</module>
+    <module>ph-fonts-alegreya-sans</module>
   </modules>
 </project>

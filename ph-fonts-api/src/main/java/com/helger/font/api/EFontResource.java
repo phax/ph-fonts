@@ -16,23 +16,16 @@
  */
 package com.helger.font.api;
 
-import java.io.InputStream;
-import java.util.EnumSet;
-import java.util.Set;
-
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.io.resource.ClassPathResource;
 
 /**
  * Defines the available font resources available in this library.
  *
  * @author Philip Helger
  */
-public enum EFontResource implements IFontResource
+public enum EFontResource
 {
   // Algrey Sans (SIL Open Font License, 1.1)
   ALGREYA_SANS_THIN ("Algrey Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/ttf/AlegreyaSans/AlegreyaSans-Thin.ttf"),
@@ -115,68 +108,8 @@ public enum EFontResource implements IFontResource
   }
 
   @Nonnull
-  @Nonempty
-  public String getFontName ()
+  public IFontResource getFontResource ()
   {
-    return m_aRes.getFontName ();
-  }
-
-  @Nonnull
-  public EFontType getFontType ()
-  {
-    return m_aRes.getFontType ();
-  }
-
-  @Nonnull
-  public IFontStyle getFontStyle ()
-  {
-    return m_aRes.getFontStyle ();
-  }
-
-  @Nonnull
-  public IFontWeight getFontWeight ()
-  {
-    return m_aRes.getFontWeight ();
-  }
-
-  @Nonnull
-  @Nonempty
-  public String getPath ()
-  {
-    return m_aRes.getPath ();
-  }
-
-  @Nonnull
-  public ClassPathResource getResource ()
-  {
-    return m_aRes.getResource ();
-  }
-
-  @Nonnull
-  public InputStream getInputStream ()
-  {
-    return m_aRes.getInputStream ();
-  }
-
-  @Nonnull
-  @ReturnsMutableCopy
-  public static Set <EFontResource> getAllResourcesOfFontType (@Nullable final EFontType eFontType)
-  {
-    final Set <EFontResource> ret = EnumSet.noneOf (EFontResource.class);
-    for (final EFontResource e : values ())
-      if (e.getFontType ().equals (eFontType))
-        ret.add (e);
-    return ret;
-  }
-
-  @Nonnull
-  @ReturnsMutableCopy
-  public static Set <EFontResource> getAllResourcesOfFontWeight (@Nullable final IFontWeight eFontWeight)
-  {
-    final Set <EFontResource> ret = EnumSet.noneOf (EFontResource.class);
-    for (final EFontResource e : values ())
-      if (e.getFontWeight ().equals (eFontWeight))
-        ret.add (e);
-    return ret;
+    return m_aRes;
   }
 }

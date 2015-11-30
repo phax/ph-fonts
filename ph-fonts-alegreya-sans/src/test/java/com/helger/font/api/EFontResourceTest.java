@@ -23,7 +23,7 @@ import java.util.Set;
 
 import org.junit.Test;
 
-import com.helger.font.api.EFontResource;
+import com.helger.font.alegrya_sans.EFontResource;
 
 /**
  * Test class for class {@link EFontResource}.
@@ -38,8 +38,8 @@ public final class EFontResourceTest
     final Set <String> aUniquePaths = new HashSet <String> ();
     for (final EFontResource e : EFontResource.values ())
     {
-      assertTrue (e.name (), e.getResource ().exists ());
-      assertTrue (e.name (), aUniquePaths.add (e.getResource ().getPath ()));
+      assertTrue (e.name (), e.getFontResource ().getResource ().exists ());
+      assertTrue (e.name (), aUniquePaths.add (e.getFontResource ().getResource ().getPath ()));
     }
   }
 }

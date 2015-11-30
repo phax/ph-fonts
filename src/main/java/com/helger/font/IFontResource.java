@@ -26,27 +26,48 @@ import com.helger.commons.io.resource.IReadableResource;
 
 /**
  * Base interface for a single font resource.
- * 
+ *
  * @author Philip Helger
  */
 public interface IFontResource extends IHasInputStream, Serializable
 {
+  /**
+   * @return The overall font name.
+   */
+  @Nonnull
+  @Nonempty
+  String getFontName ();
+
   /**
    * @return The type of font (otf, ttf, ...)
    */
   @Nonnull
   EFontType getFontType ();
 
+  /**
+   * @return The font style (combination of regular, bold and italic)
+   */
   @Nonnull
   IFontStyle getFontStyle ();
 
+  /**
+   * @return The overall font weight.
+   */
   @Nonnull
   IFontWeight getFontWeight ();
 
+  /**
+   * @return The path to the font resource. May be classpath relative or an
+   *         absolute path.
+   */
   @Nonnull
   @Nonempty
   String getPath ();
 
+  /**
+   * @return The readable resource to read the specified font resource. Never
+   *         <code>null</code>.
+   */
   @Nonnull
   IReadableResource getResource ();
 }

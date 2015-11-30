@@ -96,6 +96,8 @@
         <artifactId>license-maven-plugin</artifactId>
         <configuration>
           <excludes>
+            <exclude>**/LICENSE</exclude>
+            <exclude>**/NOTICE</exclude>
             <exclude>src/main/resources/fonts/**</exclude>
           </excludes>
         </configuration>

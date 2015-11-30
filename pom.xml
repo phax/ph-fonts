@@ -88,6 +88,11 @@
       </dependency>
       <dependency>
         <groupId>com.helger</groupId>
+        <artifactId>ph-fonts-exo2</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.helger</groupId>
         <artifactId>ph-fonts-lato2</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -112,6 +117,7 @@
     <!-- The fonts: -->
     <module>ph-fonts-alegreya-sans</module>
     <module>ph-fonts-anaheim</module>
+    <module>ph-fonts-exo2</module>
     <module>ph-fonts-lato2</module>
   </modules>
 </project>

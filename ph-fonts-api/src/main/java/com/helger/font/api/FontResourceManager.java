@@ -60,17 +60,25 @@ public final class FontResourceManager
       // Remove all existing font resources
       s_aItems.clear ();
 
-      final ClassLoader aRealClassLoader = aClassLoader != null ? aClassLoader : ClassLoaderHelper.getDefaultClassLoader ();
+      final ClassLoader aRealClassLoader = aClassLoader != null ? aClassLoader
+                                                                : ClassLoaderHelper.getDefaultClassLoader ();
 
       // Load all SPI resources
-      for (final IFontResourceProviderSPI aProvider : ServiceLoaderHelper.getAllSPIImplementations (IFontResourceProviderSPI.class, aRealClassLoader))
+      for (final IFontResourceProviderSPI aProvider : ServiceLoaderHelper.getAllSPIImplementations (IFontResourceProviderSPI.class,
+                                                                                                    aRealClassLoader))
       {
         // Register all font resources of the current provider
         for (final IFontResource aFontResource : aProvider.getAllFontResources ())
           if (!s_aItems.add (aFontResource))
-            s_aLogger.warn ("Failed to register font resource " + aFontResource + " because this resource is already contained!");
+            s_aLogger.warn ("Failed to register font resource " +
+                            aFontResource +
+                            " because this resource is already contained!");
       }
-      s_aLogger.info ("Successfully registered " + s_aItems.size () + " font resources!");
+
+      if (s_aItems.isEmpty ())
+        s_aLogger.info ("No font resources available for registration!");
+      else
+        s_aLogger.info ("Successfully registered " + s_aItems.size () + " font resources!");
     }
     finally
 
@@ -107,6 +115,13 @@ public final class FontResourceManager
     return getAllResources (null);
   }
 
+  /**
+   * @param aFilter
+   *        An optional filter to be used. May be <code>null</code> to indicate
+   *        to return all resources.
+   * @return An ordered set with all matching contained font resources. Never
+   *         <code>null</code> but maybe empty.
+   */
   @Nonnull
   @ReturnsMutableCopy
   public static Set <IFontResource> getAllResources (@Nullable final IFilter <IFontResource> aFilter)

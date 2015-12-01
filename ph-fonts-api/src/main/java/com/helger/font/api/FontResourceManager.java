@@ -27,8 +27,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.concurrent.SimpleReadWriteLock;
+import com.helger.commons.filter.IFilter;
 import com.helger.commons.lang.ClassLoaderHelper;
 import com.helger.commons.lang.ServiceLoaderHelper;
 import com.helger.commons.string.StringHelper;
@@ -60,19 +60,15 @@ public final class FontResourceManager
       // Remove all existing font resources
       s_aItems.clear ();
 
-      final ClassLoader aRealClassLoader = aClassLoader != null ? aClassLoader
-                                                                : ClassLoaderHelper.getDefaultClassLoader ();
+      final ClassLoader aRealClassLoader = aClassLoader != null ? aClassLoader : ClassLoaderHelper.getDefaultClassLoader ();
 
       // Load all SPI resources
-      for (final IFontResourceProviderSPI aProvider : ServiceLoaderHelper.getAllSPIImplementations (IFontResourceProviderSPI.class,
-                                                                                                    aRealClassLoader))
+      for (final IFontResourceProviderSPI aProvider : ServiceLoaderHelper.getAllSPIImplementations (IFontResourceProviderSPI.class, aRealClassLoader))
       {
         // Register all font resources of the current provider
         for (final IFontResource aFontResource : aProvider.getAllFontResources ())
           if (!s_aItems.add (aFontResource))
-            s_aLogger.warn ("Failed to register font resource " +
-                            aFontResource +
-                            " because this resource is already contained!");
+            s_aLogger.warn ("Failed to register font resource " + aFontResource + " because this resource is already contained!");
       }
       s_aLogger.info ("Successfully registered " + s_aItems.size () + " font resources!");
     }
@@ -83,8 +79,11 @@ public final class FontResourceManager
     }
   }
 
+  /**
+   * @return The number of registered font resources. Always &ge; 0.
+   */
   @Nonnegative
-  public static int getRegisteredFontResourceCount ()
+  public static int getRegisteredResourceCount ()
   {
     s_aRWLock.readLock ().lock ();
     try
@@ -97,19 +96,34 @@ public final class FontResourceManager
     }
   }
 
+  /**
+   * @return An ordered set with all contained font resources. Never
+   *         <code>null</code> but maybe empty.
+   */
   @Nonnull
   @ReturnsMutableCopy
-  public static Set <IFontResource> getAllFontResources ()
+  public static Set <IFontResource> getAllResources ()
   {
+    return getAllResources (null);
+  }
+
+  @Nonnull
+  @ReturnsMutableCopy
+  public static Set <IFontResource> getAllResources (@Nullable final IFilter <IFontResource> aFilter)
+  {
+    final Set <IFontResource> ret = new LinkedHashSet <IFontResource> ();
     s_aRWLock.readLock ().lock ();
     try
     {
-      return CollectionHelper.newOrderedSet (s_aItems);
+      for (final IFontResource aRes : s_aItems)
+        if (aFilter == null || aFilter.matchesFilter (aRes))
+          ret.add (aRes);
     }
     finally
     {
       s_aRWLock.readLock ().unlock ();
     }
+    return ret;
   }
 
   @Nonnull

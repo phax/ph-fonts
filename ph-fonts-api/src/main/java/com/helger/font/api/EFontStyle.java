@@ -64,7 +64,7 @@ public enum EFontStyle implements IFontStyle
   }
 
   @Nullable
-  public static IFontStyle getFromIDOrNull (@Nullable final String sID)
+  public static EFontStyle getFromIDOrNull (@Nullable final String sID)
   {
     return EnumHelper.getFromIDOrNull (EFontStyle.class, sID);
   }

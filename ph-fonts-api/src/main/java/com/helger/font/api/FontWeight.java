@@ -17,31 +17,23 @@
 package com.helger.font.api;
 
 import javax.annotation.Nonnegative;
-import javax.annotation.Nullable;
+
+import com.helger.commons.ValueEnforcer;
+import com.helger.commons.hashcode.HashCodeGenerator;
+import com.helger.commons.string.ToStringGenerator;
 
 /**
- * Weight of a font. Default values.
+ * Weight of a font.
  *
  * @author Philip Helger
  */
-public enum EFontWeight implements IFontWeight
+public class FontWeight implements IFontWeight
 {
-  HAIRLINE (90),
-  THIN (100),
-  EXTRA_LIGHT (200),
-  LIGHT (300),
-  REGULAR (400),
-  MEDIUM (500),
-  SEMI_BOLD (600),
-  BOLD (700),
-  EXTRA_BOLD (800),
-  BLACK (900);
-
   private final int m_nWeight;
 
-  private EFontWeight (@Nonnegative final int nWeight)
+  public FontWeight (@Nonnegative final int nWeight)
   {
-    m_nWeight = nWeight;
+    m_nWeight = ValueEnforcer.isGE0 (nWeight, "Weight");
   }
 
   @Nonnegative
@@ -50,19 +42,26 @@ public enum EFontWeight implements IFontWeight
     return m_nWeight;
   }
 
-  @Nullable
-  public static EFontWeight getFromWeightOrNull (@Nonnegative final int nWeight)
+  @Override
+  public boolean equals (final Object o)
   {
-    return getFromWeightOrDefault (nWeight, null);
+    if (o == this)
+      return true;
+    if (o == null || !getClass ().equals (o.getClass ()))
+      return false;
+    final FontWeight rhs = (FontWeight) o;
+    return m_nWeight == rhs.m_nWeight;
   }
 
-  @Nullable
-  public static EFontWeight getFromWeightOrDefault (@Nonnegative final int nWeight,
-                                                    @Nullable final EFontWeight eDefault)
+  @Override
+  public int hashCode ()
   {
-    for (final EFontWeight e : values ())
-      if (e.getWeight () == nWeight)
-        return e;
-    return eDefault;
+    return new HashCodeGenerator (this).append (m_nWeight).getHashCode ();
+  }
+
+  @Override
+  public String toString ()
+  {
+    return new ToStringGenerator (this).append ("Weight", m_nWeight).toString ();
   }
 }

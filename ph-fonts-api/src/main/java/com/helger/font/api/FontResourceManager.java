@@ -42,7 +42,7 @@ public final class FontResourceManager
 {
   private static final Logger s_aLogger = LoggerFactory.getLogger (FontResourceManager.class);
   private static final SimpleReadWriteLock s_aRWLock = new SimpleReadWriteLock ();
-  private static final Set <IFontResource> s_aItems = new LinkedHashSet <IFontResource> ();
+  private static final Set <IFontResource> s_aItems = new LinkedHashSet <> ();
 
   static
   {
@@ -54,9 +54,7 @@ public final class FontResourceManager
 
   public static void reInit (@Nullable final ClassLoader aClassLoader)
   {
-    s_aRWLock.writeLock ().lock ();
-    try
-    {
+    s_aRWLock.writeLocked ( () -> {
       // Remove all existing font resources
       s_aItems.clear ();
 
@@ -79,12 +77,7 @@ public final class FontResourceManager
         s_aLogger.info ("No font resources available for registration!");
       else
         s_aLogger.info ("Successfully registered " + s_aItems.size () + " font resources!");
-    }
-    finally
-
-    {
-      s_aRWLock.writeLock ().unlock ();
-    }
+    });
   }
 
   /**
@@ -93,15 +86,7 @@ public final class FontResourceManager
   @Nonnegative
   public static int getRegisteredResourceCount ()
   {
-    s_aRWLock.readLock ().lock ();
-    try
-    {
-      return s_aItems.size ();
-    }
-    finally
-    {
-      s_aRWLock.readLock ().unlock ();
-    }
+    return s_aRWLock.readLocked ( () -> s_aItems.size ());
   }
 
   /**
@@ -126,18 +111,12 @@ public final class FontResourceManager
   @ReturnsMutableCopy
   public static Set <IFontResource> getAllResources (@Nullable final IFilter <IFontResource> aFilter)
   {
-    final Set <IFontResource> ret = new LinkedHashSet <IFontResource> ();
-    s_aRWLock.readLock ().lock ();
-    try
-    {
+    final Set <IFontResource> ret = new LinkedHashSet <> ();
+    s_aRWLock.readLocked ( () -> {
       for (final IFontResource aRes : s_aItems)
-        if (aFilter == null || aFilter.matchesFilter (aRes))
+        if (aFilter == null || aFilter.test (aRes))
           ret.add (aRes);
-    }
-    finally
-    {
-      s_aRWLock.readLock ().unlock ();
-    }
+    });
     return ret;
   }
 
@@ -145,20 +124,14 @@ public final class FontResourceManager
   @ReturnsMutableCopy
   public static Set <IFontResource> getAllResourcesOfFontType (@Nullable final String sFontName)
   {
-    final Set <IFontResource> ret = new LinkedHashSet <IFontResource> ();
+    final Set <IFontResource> ret = new LinkedHashSet <> ();
     if (StringHelper.hasText (sFontName))
     {
-      s_aRWLock.readLock ().lock ();
-      try
-      {
+      s_aRWLock.readLocked ( () -> {
         for (final IFontResource aRes : s_aItems)
           if (aRes.getFontName ().equals (sFontName))
             ret.add (aRes);
-      }
-      finally
-      {
-        s_aRWLock.readLock ().unlock ();
-      }
+      });
     }
     return ret;
   }
@@ -167,20 +140,14 @@ public final class FontResourceManager
   @ReturnsMutableCopy
   public static Set <IFontResource> getAllResourcesOfFontType (@Nullable final EFontType eFontType)
   {
-    final Set <IFontResource> ret = new LinkedHashSet <IFontResource> ();
+    final Set <IFontResource> ret = new LinkedHashSet <> ();
     if (eFontType != null)
     {
-      s_aRWLock.readLock ().lock ();
-      try
-      {
+      s_aRWLock.readLocked ( () -> {
         for (final IFontResource aRes : s_aItems)
           if (aRes.getFontType ().equals (eFontType))
             ret.add (aRes);
-      }
-      finally
-      {
-        s_aRWLock.readLock ().unlock ();
-      }
+      });
     }
     return ret;
   }
@@ -189,20 +156,14 @@ public final class FontResourceManager
   @ReturnsMutableCopy
   public static Set <IFontResource> getAllResourcesOfFontWeight (@Nullable final IFontWeight aFontWeight)
   {
-    final Set <IFontResource> ret = new LinkedHashSet <IFontResource> ();
+    final Set <IFontResource> ret = new LinkedHashSet <> ();
     if (aFontWeight != null)
     {
-      s_aRWLock.readLock ().lock ();
-      try
-      {
+      s_aRWLock.readLocked ( () -> {
         for (final IFontResource aRes : s_aItems)
           if (aRes.getFontWeight ().equals (aFontWeight))
             ret.add (aRes);
-      }
-      finally
-      {
-        s_aRWLock.readLock ().unlock ();
-      }
+      });
     }
     return ret;
   }

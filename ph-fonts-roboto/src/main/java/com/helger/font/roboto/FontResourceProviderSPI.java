@@ -34,7 +34,7 @@ public final class FontResourceProviderSPI implements IFontResourceProviderSPI
   @Nonnull
   public Iterable <? extends IFontResource> getAllFontResources ()
   {
-    final List <IFontResource> ret = new ArrayList <IFontResource> ();
+    final List <IFontResource> ret = new ArrayList <> ();
     for (final EFontResource e : EFontResource.values ())
       ret.add (e.getFontResource ());
     return ret;

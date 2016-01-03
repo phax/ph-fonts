@@ -12,7 +12,10 @@ am4+j6puMEscTcRjmMUxbMtcYxcE207B6f9ka5BLYC9VeAn38u5J77ilO3j4UrT7a7gt+7INZYinIYux
 Uq4+Sb7Mf8HtQP+h0uyWx+OILNqWN7aXnGjnJA964DUfRELNWDZEXcQMLWN1RPEchPs5oATj18ojlKtYzVUCmj/xrRaDKU="
     
 jdk:
-  - openjdk6
+  - oraclejdk8
+  
+install:
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V -U
   
 cache:
   directories:

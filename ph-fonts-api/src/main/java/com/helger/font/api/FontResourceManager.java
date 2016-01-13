@@ -18,6 +18,7 @@ package com.helger.font.api;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.function.Predicate;
 
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
@@ -27,8 +28,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.helger.commons.annotation.ReturnsMutableCopy;
+import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.concurrent.SimpleReadWriteLock;
-import com.helger.commons.filter.IFilter;
 import com.helger.commons.lang.ClassLoaderHelper;
 import com.helger.commons.lang.ServiceLoaderHelper;
 import com.helger.commons.string.StringHelper;
@@ -97,7 +98,7 @@ public final class FontResourceManager
   @ReturnsMutableCopy
   public static Set <IFontResource> getAllResources ()
   {
-    return getAllResources (null);
+    return s_aRWLock.readLocked ( () -> CollectionHelper.newSet (s_aItems));
   }
 
   /**
@@ -109,12 +110,15 @@ public final class FontResourceManager
    */
   @Nonnull
   @ReturnsMutableCopy
-  public static Set <IFontResource> getAllResources (@Nullable final IFilter <IFontResource> aFilter)
+  public static Set <IFontResource> getAllResources (@Nullable final Predicate <IFontResource> aFilter)
   {
+    if (aFilter == null)
+      return getAllResources ();
+
     final Set <IFontResource> ret = new LinkedHashSet <> ();
     s_aRWLock.readLocked ( () -> {
       for (final IFontResource aRes : s_aItems)
-        if (aFilter == null || aFilter.test (aRes))
+        if (aFilter.test (aRes))
           ret.add (aRes);
     });
     return ret;
@@ -124,47 +128,29 @@ public final class FontResourceManager
   @ReturnsMutableCopy
   public static Set <IFontResource> getAllResourcesOfFontType (@Nullable final String sFontName)
   {
-    final Set <IFontResource> ret = new LinkedHashSet <> ();
-    if (StringHelper.hasText (sFontName))
-    {
-      s_aRWLock.readLocked ( () -> {
-        for (final IFontResource aRes : s_aItems)
-          if (aRes.getFontName ().equals (sFontName))
-            ret.add (aRes);
-      });
-    }
-    return ret;
+    if (StringHelper.hasNoText (sFontName))
+      return new LinkedHashSet <> ();
+
+    return getAllResources (f -> f.getFontName ().equals (sFontName));
   }
 
   @Nonnull
   @ReturnsMutableCopy
   public static Set <IFontResource> getAllResourcesOfFontType (@Nullable final EFontType eFontType)
   {
-    final Set <IFontResource> ret = new LinkedHashSet <> ();
-    if (eFontType != null)
-    {
-      s_aRWLock.readLocked ( () -> {
-        for (final IFontResource aRes : s_aItems)
-          if (aRes.getFontType ().equals (eFontType))
-            ret.add (aRes);
-      });
-    }
-    return ret;
+    if (eFontType == null)
+      return new LinkedHashSet <> ();
+
+    return getAllResources (f -> f.getFontType ().equals (eFontType));
   }
 
   @Nonnull
   @ReturnsMutableCopy
   public static Set <IFontResource> getAllResourcesOfFontWeight (@Nullable final IFontWeight aFontWeight)
   {
-    final Set <IFontResource> ret = new LinkedHashSet <> ();
-    if (aFontWeight != null)
-    {
-      s_aRWLock.readLocked ( () -> {
-        for (final IFontResource aRes : s_aItems)
-          if (aRes.getFontWeight ().equals (aFontWeight))
-            ret.add (aRes);
-      });
-    }
-    return ret;
+    if (aFontWeight == null)
+      return new LinkedHashSet <> ();
+
+    return getAllResources (f -> f.getFontWeight ().equals (aFontWeight));
   }
 }

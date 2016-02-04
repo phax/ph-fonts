@@ -115,13 +115,7 @@ public final class FontResourceManager
     if (aFilter == null)
       return getAllResources ();
 
-    final Set <IFontResource> ret = new LinkedHashSet <> ();
-    s_aRWLock.readLocked ( () -> {
-      for (final IFontResource aRes : s_aItems)
-        if (aFilter.test (aRes))
-          ret.add (aRes);
-    });
-    return ret;
+    return s_aRWLock.readLocked ( () -> CollectionHelper.newOrderedSet (s_aItems, aFilter));
   }
 
   @Nonnull

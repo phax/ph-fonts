@@ -19,6 +19,8 @@ package com.helger.font.api;
 import javax.annotation.Nonnegative;
 import javax.annotation.Nullable;
 
+import com.helger.commons.lang.EnumHelper;
+
 /**
  * Weight of a font. Default values.
  *
@@ -60,9 +62,6 @@ public enum EFontWeight implements IFontWeight
   public static EFontWeight getFromWeightOrDefault (@Nonnegative final int nWeight,
                                                     @Nullable final EFontWeight eDefault)
   {
-    for (final EFontWeight e : values ())
-      if (e.getWeight () == nWeight)
-        return e;
-    return eDefault;
+    return EnumHelper.findFirst (EFontWeight.class, e -> e.getWeight () == nWeight, eDefault);
   }
 }

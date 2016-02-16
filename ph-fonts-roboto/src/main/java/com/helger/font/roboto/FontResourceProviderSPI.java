@@ -16,11 +16,9 @@
  */
 package com.helger.font.roboto;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.annotation.Nonnull;
 
+import com.helger.commons.collection.CollectionHelper;
 import com.helger.font.api.IFontResource;
 import com.helger.font.api.IFontResourceProviderSPI;
 
@@ -34,9 +32,6 @@ public final class FontResourceProviderSPI implements IFontResourceProviderSPI
   @Nonnull
   public Iterable <? extends IFontResource> getAllFontResources ()
   {
-    final List <IFontResource> ret = new ArrayList <> ();
-    for (final EFontResource e : EFontResource.values ())
-      ret.add (e.getFontResource ());
-    return ret;
+    return CollectionHelper.newListMapped (EFontResource.values (), e -> e.getFontResource ());
   }
 }

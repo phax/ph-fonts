@@ -29,7 +29,7 @@ import org.slf4j.LoggerFactory;
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.collection.ext.CommonsLinkedHashSet;
-import com.helger.commons.collection.ext.ICommonsSet;
+import com.helger.commons.collection.ext.ICommonsOrderedSet;
 import com.helger.commons.concurrent.SimpleReadWriteLock;
 import com.helger.commons.lang.ClassLoaderHelper;
 import com.helger.commons.lang.ServiceLoaderHelper;
@@ -45,7 +45,7 @@ public final class FontResourceManager
   private static final Logger s_aLogger = LoggerFactory.getLogger (FontResourceManager.class);
   private static final SimpleReadWriteLock s_aRWLock = new SimpleReadWriteLock ();
   @GuardedBy ("s_aRWLock")
-  private static final ICommonsSet <IFontResource> s_aItems = new CommonsLinkedHashSet <> ();
+  private static final ICommonsOrderedSet <IFontResource> s_aItems = new CommonsLinkedHashSet <> ();
 
   static
   {
@@ -98,7 +98,7 @@ public final class FontResourceManager
    */
   @Nonnull
   @ReturnsMutableCopy
-  public static ICommonsSet <IFontResource> getAllResources ()
+  public static ICommonsOrderedSet <IFontResource> getAllResources ()
   {
     return s_aRWLock.readLocked ( () -> s_aItems.getClone ());
   }
@@ -112,7 +112,7 @@ public final class FontResourceManager
    */
   @Nonnull
   @ReturnsMutableCopy
-  public static ICommonsSet <IFontResource> getAllResources (@Nullable final Predicate <IFontResource> aFilter)
+  public static ICommonsOrderedSet <IFontResource> getAllResources (@Nullable final Predicate <IFontResource> aFilter)
   {
     if (aFilter == null)
       return getAllResources ();
@@ -122,7 +122,7 @@ public final class FontResourceManager
 
   @Nonnull
   @ReturnsMutableCopy
-  public static ICommonsSet <IFontResource> getAllResourcesOfFontType (@Nullable final String sFontName)
+  public static ICommonsOrderedSet <IFontResource> getAllResourcesOfFontType (@Nullable final String sFontName)
   {
     if (StringHelper.hasNoText (sFontName))
       return new CommonsLinkedHashSet <> ();
@@ -132,7 +132,7 @@ public final class FontResourceManager
 
   @Nonnull
   @ReturnsMutableCopy
-  public static ICommonsSet <IFontResource> getAllResourcesOfFontType (@Nullable final EFontType eFontType)
+  public static ICommonsOrderedSet <IFontResource> getAllResourcesOfFontType (@Nullable final EFontType eFontType)
   {
     if (eFontType == null)
       return new CommonsLinkedHashSet <> ();
@@ -142,7 +142,7 @@ public final class FontResourceManager
 
   @Nonnull
   @ReturnsMutableCopy
-  public static ICommonsSet <IFontResource> getAllResourcesOfFontWeight (@Nullable final IFontWeight aFontWeight)
+  public static ICommonsOrderedSet <IFontResource> getAllResourcesOfFontWeight (@Nullable final IFontWeight aFontWeight)
   {
     if (aFontWeight == null)
       return new CommonsLinkedHashSet <> ();

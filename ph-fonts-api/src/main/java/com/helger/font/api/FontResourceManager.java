@@ -16,19 +16,20 @@
  */
 package com.helger.font.api;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
 import java.util.function.Predicate;
 
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import javax.annotation.concurrent.GuardedBy;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.ext.CommonsLinkedHashSet;
+import com.helger.commons.collection.ext.ICommonsSet;
 import com.helger.commons.concurrent.SimpleReadWriteLock;
 import com.helger.commons.lang.ClassLoaderHelper;
 import com.helger.commons.lang.ServiceLoaderHelper;
@@ -43,7 +44,8 @@ public final class FontResourceManager
 {
   private static final Logger s_aLogger = LoggerFactory.getLogger (FontResourceManager.class);
   private static final SimpleReadWriteLock s_aRWLock = new SimpleReadWriteLock ();
-  private static final Set <IFontResource> s_aItems = new LinkedHashSet <> ();
+  @GuardedBy ("s_aRWLock")
+  private static final ICommonsSet <IFontResource> s_aItems = new CommonsLinkedHashSet <> ();
 
   static
   {
@@ -96,9 +98,9 @@ public final class FontResourceManager
    */
   @Nonnull
   @ReturnsMutableCopy
-  public static Set <IFontResource> getAllResources ()
+  public static ICommonsSet <IFontResource> getAllResources ()
   {
-    return s_aRWLock.readLocked ( () -> CollectionHelper.newSet (s_aItems));
+    return s_aRWLock.readLocked ( () -> s_aItems.getClone ());
   }
 
   /**
@@ -110,7 +112,7 @@ public final class FontResourceManager
    */
   @Nonnull
   @ReturnsMutableCopy
-  public static Set <IFontResource> getAllResources (@Nullable final Predicate <IFontResource> aFilter)
+  public static ICommonsSet <IFontResource> getAllResources (@Nullable final Predicate <IFontResource> aFilter)
   {
     if (aFilter == null)
       return getAllResources ();
@@ -120,30 +122,30 @@ public final class FontResourceManager
 
   @Nonnull
   @ReturnsMutableCopy
-  public static Set <IFontResource> getAllResourcesOfFontType (@Nullable final String sFontName)
+  public static ICommonsSet <IFontResource> getAllResourcesOfFontType (@Nullable final String sFontName)
   {
     if (StringHelper.hasNoText (sFontName))
-      return new LinkedHashSet <> ();
+      return new CommonsLinkedHashSet <> ();
 
     return getAllResources (f -> f.getFontName ().equals (sFontName));
   }
 
   @Nonnull
   @ReturnsMutableCopy
-  public static Set <IFontResource> getAllResourcesOfFontType (@Nullable final EFontType eFontType)
+  public static ICommonsSet <IFontResource> getAllResourcesOfFontType (@Nullable final EFontType eFontType)
   {
     if (eFontType == null)
-      return new LinkedHashSet <> ();
+      return new CommonsLinkedHashSet <> ();
 
     return getAllResources (f -> f.getFontType ().equals (eFontType));
   }
 
   @Nonnull
   @ReturnsMutableCopy
-  public static Set <IFontResource> getAllResourcesOfFontWeight (@Nullable final IFontWeight aFontWeight)
+  public static ICommonsSet <IFontResource> getAllResourcesOfFontWeight (@Nullable final IFontWeight aFontWeight)
   {
     if (aFontWeight == null)
-      return new LinkedHashSet <> ();
+      return new CommonsLinkedHashSet <> ();
 
     return getAllResources (f -> f.getFontWeight ().equals (aFontWeight));
   }

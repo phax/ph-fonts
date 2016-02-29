@@ -18,12 +18,10 @@ package com.helger.font.roboto;
 
 import static org.junit.Assert.assertTrue;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import org.junit.Test;
 
-import com.helger.font.roboto.EFontResource;
+import com.helger.commons.collection.ext.CommonsHashSet;
+import com.helger.commons.collection.ext.ICommonsSet;
 
 /**
  * Test class for class {@link EFontResource}.
@@ -35,7 +33,7 @@ public final class EFontResourceTest
   @Test
   public void testBasic ()
   {
-    final Set <String> aUniquePaths = new HashSet <String> ();
+    final ICommonsSet <String> aUniquePaths = new CommonsHashSet <> ();
     for (final EFontResource e : EFontResource.values ())
     {
       assertTrue (e.name (), e.getFontResource ().getResource ().exists ());

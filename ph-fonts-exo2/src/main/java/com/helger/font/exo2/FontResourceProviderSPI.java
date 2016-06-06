@@ -18,6 +18,7 @@ package com.helger.font.exo2;
 
 import javax.annotation.Nonnull;
 
+import com.helger.commons.annotation.IsSPIImplementation;
 import com.helger.commons.collection.CollectionHelper;
 import com.helger.font.api.IFontResource;
 import com.helger.font.api.IFontResourceProviderSPI;
@@ -27,6 +28,7 @@ import com.helger.font.api.IFontResourceProviderSPI;
  *
  * @author Philip Helger
  */
+@IsSPIImplementation
 public final class FontResourceProviderSPI implements IFontResourceProviderSPI
 {
   @Nonnull

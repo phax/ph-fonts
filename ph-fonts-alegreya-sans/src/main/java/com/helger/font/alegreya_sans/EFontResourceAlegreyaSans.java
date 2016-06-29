@@ -32,7 +32,7 @@ import com.helger.font.api.IFontWeight;
  *
  * @author Philip Helger
  */
-public enum EFontResource
+public enum EFontResourceAlegreyaSans
 {
   // Alegreya Sans (SIL Open Font License, 1.1)
   ALGREYA_SANS_THIN ("Alegreya Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/ttf/AlegreyaSans/AlegreyaSans-Thin.ttf"),
@@ -52,11 +52,11 @@ public enum EFontResource
 
   private final FontResource m_aRes;
 
-  private EFontResource (@Nonnull @Nonempty final String sFontName,
-                         @Nonnull final EFontType eFontType,
-                         @Nonnull final IFontStyle aFontStyle,
-                         @Nonnull final IFontWeight aFontWeight,
-                         @Nonnull @Nonempty final String sPath)
+  private EFontResourceAlegreyaSans (@Nonnull @Nonempty final String sFontName,
+                                     @Nonnull final EFontType eFontType,
+                                     @Nonnull final IFontStyle aFontStyle,
+                                     @Nonnull final IFontWeight aFontWeight,
+                                     @Nonnull @Nonempty final String sPath)
   {
     m_aRes = new FontResource (sFontName, eFontType, aFontStyle, aFontWeight, sPath);
   }

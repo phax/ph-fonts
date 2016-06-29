@@ -24,7 +24,7 @@ import com.helger.commons.collection.ext.CommonsHashSet;
 import com.helger.commons.collection.ext.ICommonsSet;
 
 /**
- * Test class for class {@link EFontResource}.
+ * Test class for class {@link EFontResourceRoboto}.
  *
  * @author Philip Helger
  */
@@ -33,8 +33,8 @@ public final class EFontResourceTest
   @Test
   public void testBasic ()
   {
-    final ICommonsSet <String> aUniquePaths = new CommonsHashSet <> ();
-    for (final EFontResource e : EFontResource.values ())
+    final ICommonsSet <String> aUniquePaths = new CommonsHashSet<> ();
+    for (final EFontResourceRoboto e : EFontResourceRoboto.values ())
     {
       assertTrue (e.name (), e.getFontResource ().getResource ().exists ());
       assertTrue (e.name (), aUniquePaths.add (e.getFontResource ().getResource ().getPath ()));

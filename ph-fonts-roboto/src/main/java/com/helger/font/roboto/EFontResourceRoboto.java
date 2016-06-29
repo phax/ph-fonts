@@ -32,7 +32,7 @@ import com.helger.font.api.IFontWeight;
  *
  * @author Philip Helger
  */
-public enum EFontResource
+public enum EFontResourceRoboto
 {
   // Roboto (Apache License v2.0)
   ROBOTO_THIN ("Roboto", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/ttf/Roboto/Roboto-Thin.ttf"),
@@ -50,11 +50,11 @@ public enum EFontResource
 
   private final FontResource m_aRes;
 
-  private EFontResource (@Nonnull @Nonempty final String sFontName,
-                         @Nonnull final EFontType eFontType,
-                         @Nonnull final IFontStyle aFontStyle,
-                         @Nonnull final IFontWeight aFontWeight,
-                         @Nonnull @Nonempty final String sPath)
+  private EFontResourceRoboto (@Nonnull @Nonempty final String sFontName,
+                               @Nonnull final EFontType eFontType,
+                               @Nonnull final IFontStyle aFontStyle,
+                               @Nonnull final IFontWeight aFontWeight,
+                               @Nonnull @Nonempty final String sPath)
   {
     m_aRes = new FontResource (sFontName, eFontType, aFontStyle, aFontWeight, sPath);
   }

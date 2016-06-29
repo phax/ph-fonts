@@ -45,7 +45,7 @@ public final class FontResourceManager
   private static final Logger s_aLogger = LoggerFactory.getLogger (FontResourceManager.class);
   private static final SimpleReadWriteLock s_aRWLock = new SimpleReadWriteLock ();
   @GuardedBy ("s_aRWLock")
-  private static final ICommonsOrderedSet <IFontResource> s_aItems = new CommonsLinkedHashSet <> ();
+  private static final ICommonsOrderedSet <IFontResource> s_aItems = new CommonsLinkedHashSet<> ();
 
   static
   {
@@ -125,7 +125,7 @@ public final class FontResourceManager
   public static ICommonsOrderedSet <IFontResource> getAllResourcesOfFontType (@Nullable final String sFontName)
   {
     if (StringHelper.hasNoText (sFontName))
-      return new CommonsLinkedHashSet <> ();
+      return new CommonsLinkedHashSet<> ();
 
     return getAllResources (f -> f.getFontName ().equals (sFontName));
   }
@@ -135,7 +135,7 @@ public final class FontResourceManager
   public static ICommonsOrderedSet <IFontResource> getAllResourcesOfFontType (@Nullable final EFontType eFontType)
   {
     if (eFontType == null)
-      return new CommonsLinkedHashSet <> ();
+      return new CommonsLinkedHashSet<> ();
 
     return getAllResources (f -> f.getFontType ().equals (eFontType));
   }
@@ -145,7 +145,7 @@ public final class FontResourceManager
   public static ICommonsOrderedSet <IFontResource> getAllResourcesOfFontWeight (@Nullable final IFontWeight aFontWeight)
   {
     if (aFontWeight == null)
-      return new CommonsLinkedHashSet <> ();
+      return new CommonsLinkedHashSet<> ();
 
     return getAllResources (f -> f.getFontWeight ().equals (aFontWeight));
   }

@@ -32,7 +32,7 @@ import com.helger.font.api.IFontWeight;
  *
  * @author Philip Helger
  */
-public enum EFontResource
+public enum EFontResourceOpenSans
 {
   // Open Sans (Apache 2.0 License)
   OPEN_SANS_LIGHT ("Open Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.LIGHT, "fonts/ttf/OpenSans/OpenSans-Light.ttf"),
@@ -48,11 +48,11 @@ public enum EFontResource
 
   private final FontResource m_aRes;
 
-  private EFontResource (@Nonnull @Nonempty final String sFontName,
-                         @Nonnull final EFontType eFontType,
-                         @Nonnull final IFontStyle aFontStyle,
-                         @Nonnull final IFontWeight aFontWeight,
-                         @Nonnull @Nonempty final String sPath)
+  private EFontResourceOpenSans (@Nonnull @Nonempty final String sFontName,
+                                 @Nonnull final EFontType eFontType,
+                                 @Nonnull final IFontStyle aFontStyle,
+                                 @Nonnull final IFontWeight aFontWeight,
+                                 @Nonnull @Nonempty final String sPath)
   {
     m_aRes = new FontResource (sFontName, eFontType, aFontStyle, aFontWeight, sPath);
   }

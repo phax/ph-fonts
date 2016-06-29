@@ -34,6 +34,6 @@ public final class FontResourceProviderSPI implements IFontResourceProviderSPI
   @Nonnull
   public Iterable <? extends IFontResource> getAllFontResources ()
   {
-    return CollectionHelper.newListMapped (EFontResource.values (), e -> e.getFontResource ());
+    return CollectionHelper.newListMapped (EFontResourceAlegreyaSans.values (), e -> e.getFontResource ());
   }
 }

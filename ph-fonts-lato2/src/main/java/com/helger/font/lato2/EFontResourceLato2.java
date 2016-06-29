@@ -32,7 +32,7 @@ import com.helger.font.api.IFontWeight;
  *
  * @author Philip Helger
  */
-public enum EFontResource
+public enum EFontResourceLato2
 {
   // Lato2 (SIL Open Font License 1.1)
   LATO2_HAIRLINE ("Lato2", EFontType.OTF, EFontStyle.REGULAR, EFontWeight.HAIRLINE, "fonts/otf/Lato2/Lato-Hairline.ttf"),
@@ -56,11 +56,11 @@ public enum EFontResource
 
   private final FontResource m_aRes;
 
-  private EFontResource (@Nonnull @Nonempty final String sFontName,
-                         @Nonnull final EFontType eFontType,
-                         @Nonnull final IFontStyle aFontStyle,
-                         @Nonnull final IFontWeight aFontWeight,
-                         @Nonnull @Nonempty final String sPath)
+  private EFontResourceLato2 (@Nonnull @Nonempty final String sFontName,
+                              @Nonnull final EFontType eFontType,
+                              @Nonnull final IFontStyle aFontStyle,
+                              @Nonnull final IFontWeight aFontWeight,
+                              @Nonnull @Nonempty final String sPath)
   {
     m_aRes = new FontResource (sFontName, eFontType, aFontStyle, aFontWeight, sPath);
   }

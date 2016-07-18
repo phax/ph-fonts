@@ -30,7 +30,6 @@
   <description>Alegreya Sans font</description>
   <url>https://github.com/phax/ph-fonts/ph-fonts-alegreya-sans</url>
   <inceptionYear>2014</inceptionYear>
-  
   <licenses>
     <license>
       <name>Apache 2</name>
@@ -38,12 +37,10 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-
   <organization>
     <name>Philip Helger</name>
     <url>http://www.helger.com</url>
   </organization>
-
   <developers>
     <developer>
       <id>philip</id>
@@ -52,20 +49,17 @@
       <url>http://www.helger.com</url>
     </developer>
   </developers>
-
   <dependencies>
     <dependency>
       <groupId>com.helger</groupId>
       <artifactId>ph-fonts-api</artifactId>
     </dependency>
-    
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>
-  
   <build>
     <plugins>
       <plugin>
@@ -73,12 +67,10 @@
         <artifactId>maven-bundle-plugin</artifactId>
         <configuration>
           <instructions>
-            <Export-Package>
-              com.helger.font.alegreya_sans.*
-            </Export-Package>
-            <Import-Package>
-              !javax.annotation.*,*
-            </Import-Package>
+            <Export-Package>com.helger.font.alegreya_sans.*</Export-Package>
+            <Import-Package>!javax.annotation.*,*</Import-Package>
+            <Require-Capability>osgi.extender; filter:="(osgi.extender=osgi.serviceloader.registrar)"</Require-Capability>
+            <Provide-Capability>osgi.serviceloader; osgi.serviceloader=com.helger.font.alegreya_sans.FontResourceProviderSPI</Provide-Capability>
           </instructions>
         </configuration>
       </plugin>

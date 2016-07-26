@@ -26,25 +26,66 @@ import com.helger.font.api.FontResource;
 import com.helger.font.api.IFontResource;
 import com.helger.font.api.IFontStyle;
 import com.helger.font.api.IFontWeight;
+import com.helger.font.api.IHasFontResource;
 
 /**
  * Defines the available font resources available in this library.
  *
  * @author Philip Helger
  */
-public enum EFontResourceOpenSans
+public enum EFontResourceOpenSans implements IHasFontResource
 {
   // Open Sans (Apache 2.0 License)
-  OPEN_SANS_LIGHT ("Open Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.LIGHT, "fonts/ttf/OpenSans/OpenSans-Light.ttf"),
-  OPEN_SANS_LIGHT_ITALIC ("Open Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.LIGHT, "fonts/ttf/OpenSans/OpenSans-LightItalic.ttf"),
-  OPEN_SANS_NORMAL ("Open Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.REGULAR, "fonts/ttf/OpenSans/OpenSans-Regular.ttf"),
-  OPEN_SANS_NORMAL_ITALIC ("Open Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.REGULAR, "fonts/ttf/OpenSans/OpenSans-Italic.ttf"),
-  OPEN_SANS_SEMI_BOLD ("Open Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.SEMI_BOLD, "fonts/ttf/OpenSans/OpenSans-Semibold.ttf"),
-  OPEN_SANS_SEMI_BOLD_ITALIC ("Open Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.SEMI_BOLD, "fonts/ttf/OpenSans/OpenSans-SemiboldItalic.ttf"),
-  OPEN_SANS_BOLD ("Open Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BOLD, "fonts/ttf/OpenSans/OpenSans-Bold.ttf"),
-  OPEN_SANS_BOLD_ITALIC ("Open Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.BOLD, "fonts/ttf/OpenSans/OpenSans-BoldItalic.ttf"),
-  OPEN_SANS_EXTRA_BOLD ("Open Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.EXTRA_BOLD, "fonts/ttf/OpenSans/OpenSans-ExtraBold.ttf"),
-  OPEN_SANS_EXTRA_BOLD_ITALIC ("Open Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.EXTRA_BOLD, "fonts/ttf/OpenSans/OpenSans-ExtraBoldItalic.ttf");
+  OPEN_SANS_LIGHT ("Open Sans",
+                   EFontType.TTF,
+                   EFontStyle.REGULAR,
+                   EFontWeight.LIGHT,
+                   "fonts/ttf/OpenSans/OpenSans-Light.ttf"),
+  OPEN_SANS_LIGHT_ITALIC ("Open Sans",
+                          EFontType.TTF,
+                          EFontStyle.ITALIC,
+                          EFontWeight.LIGHT,
+                          "fonts/ttf/OpenSans/OpenSans-LightItalic.ttf"),
+  OPEN_SANS_NORMAL ("Open Sans",
+                    EFontType.TTF,
+                    EFontStyle.REGULAR,
+                    EFontWeight.REGULAR,
+                    "fonts/ttf/OpenSans/OpenSans-Regular.ttf"),
+  OPEN_SANS_NORMAL_ITALIC ("Open Sans",
+                           EFontType.TTF,
+                           EFontStyle.ITALIC,
+                           EFontWeight.REGULAR,
+                           "fonts/ttf/OpenSans/OpenSans-Italic.ttf"),
+  OPEN_SANS_SEMI_BOLD ("Open Sans",
+                       EFontType.TTF,
+                       EFontStyle.REGULAR,
+                       EFontWeight.SEMI_BOLD,
+                       "fonts/ttf/OpenSans/OpenSans-Semibold.ttf"),
+  OPEN_SANS_SEMI_BOLD_ITALIC ("Open Sans",
+                              EFontType.TTF,
+                              EFontStyle.ITALIC,
+                              EFontWeight.SEMI_BOLD,
+                              "fonts/ttf/OpenSans/OpenSans-SemiboldItalic.ttf"),
+  OPEN_SANS_BOLD ("Open Sans",
+                  EFontType.TTF,
+                  EFontStyle.REGULAR,
+                  EFontWeight.BOLD,
+                  "fonts/ttf/OpenSans/OpenSans-Bold.ttf"),
+  OPEN_SANS_BOLD_ITALIC ("Open Sans",
+                         EFontType.TTF,
+                         EFontStyle.ITALIC,
+                         EFontWeight.BOLD,
+                         "fonts/ttf/OpenSans/OpenSans-BoldItalic.ttf"),
+  OPEN_SANS_EXTRA_BOLD ("Open Sans",
+                        EFontType.TTF,
+                        EFontStyle.REGULAR,
+                        EFontWeight.EXTRA_BOLD,
+                        "fonts/ttf/OpenSans/OpenSans-ExtraBold.ttf"),
+  OPEN_SANS_EXTRA_BOLD_ITALIC ("Open Sans",
+                               EFontType.TTF,
+                               EFontStyle.ITALIC,
+                               EFontWeight.EXTRA_BOLD,
+                               "fonts/ttf/OpenSans/OpenSans-ExtraBoldItalic.ttf");
 
   private final FontResource m_aRes;
 

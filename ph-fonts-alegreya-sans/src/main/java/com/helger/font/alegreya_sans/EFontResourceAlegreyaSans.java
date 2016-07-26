@@ -26,29 +26,86 @@ import com.helger.font.api.FontResource;
 import com.helger.font.api.IFontResource;
 import com.helger.font.api.IFontStyle;
 import com.helger.font.api.IFontWeight;
+import com.helger.font.api.IHasFontResource;
 
 /**
  * Defines the available font resources available in this library.
  *
  * @author Philip Helger
  */
-public enum EFontResourceAlegreyaSans
+public enum EFontResourceAlegreyaSans implements IHasFontResource
 {
   // Alegreya Sans (SIL Open Font License, 1.1)
-  ALGREYA_SANS_THIN ("Alegreya Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/ttf/AlegreyaSans/AlegreyaSans-Thin.ttf"),
-  ALGREYA_SANS_THIN_ITALIC ("Alegreya Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.THIN, "fonts/ttf/AlegreyaSans/AlegreyaSans-ThinItalic.ttf"),
-  ALGREYA_SANS_LIGHT ("Alegreya Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.LIGHT, "fonts/ttf/AlegreyaSans/AlegreyaSans-Light.ttf"),
-  ALGREYA_SANS_LIGHT_ITALIC ("Alegreya Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.LIGHT, "fonts/ttf/AlegreyaSans/AlegreyaSans-LightItalic.ttf"),
-  ALGREYA_SANS_NORMAL ("Alegreya Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.REGULAR, "fonts/ttf/AlegreyaSans/AlegreyaSans-Regular.ttf"),
-  ALGREYA_SANS_NORMAL_ITALIC ("Alegreya Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.REGULAR, "fonts/ttf/AlegreyaSans/AlegreyaSans-Italic.ttf"),
-  ALGREYA_SANS_MEDIUM ("Alegreya Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.MEDIUM, "fonts/ttf/AlegreyaSans/AlegreyaSans-Medium.ttf"),
-  ALGREYA_SANS_MEDIUM_ITALIC ("Alegreya Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.MEDIUM, "fonts/ttf/AlegreyaSans/AlegreyaSans-MediumItalic.ttf"),
-  ALGREYA_SANS_BOLD ("Alegreya Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BOLD, "fonts/ttf/AlegreyaSans/AlegreyaSans-Bold.ttf"),
-  ALGREYA_SANS_BOLD_ITALIC ("Alegreya Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.BOLD, "fonts/ttf/AlegreyaSans/AlegreyaSans-BoldItalic.ttf"),
-  ALGREYA_SANS_EXTRA_BOLD ("Alegreya Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.EXTRA_BOLD, "fonts/ttf/AlegreyaSans/AlegreyaSans-ExtraBold.ttf"),
-  ALGREYA_SANS_EXTRA_BOLD_ITALIC ("Alegreya Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.EXTRA_BOLD, "fonts/ttf/AlegreyaSans/AlegreyaSans-ExtraBoldItalic.ttf"),
-  ALGREYA_SANS_BLACK ("Alegreya Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BLACK, "fonts/ttf/AlegreyaSans/AlegreyaSans-Black.ttf"),
-  ALGREYA_SANS_BLACK_ITALIC ("Alegreya Sans", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.BLACK, "fonts/ttf/AlegreyaSans/AlegreyaSans-BlackItalic.ttf");
+  ALGREYA_SANS_THIN ("Alegreya Sans",
+                     EFontType.TTF,
+                     EFontStyle.REGULAR,
+                     EFontWeight.THIN,
+                     "fonts/ttf/AlegreyaSans/AlegreyaSans-Thin.ttf"),
+  ALGREYA_SANS_THIN_ITALIC ("Alegreya Sans",
+                            EFontType.TTF,
+                            EFontStyle.ITALIC,
+                            EFontWeight.THIN,
+                            "fonts/ttf/AlegreyaSans/AlegreyaSans-ThinItalic.ttf"),
+  ALGREYA_SANS_LIGHT ("Alegreya Sans",
+                      EFontType.TTF,
+                      EFontStyle.REGULAR,
+                      EFontWeight.LIGHT,
+                      "fonts/ttf/AlegreyaSans/AlegreyaSans-Light.ttf"),
+  ALGREYA_SANS_LIGHT_ITALIC ("Alegreya Sans",
+                             EFontType.TTF,
+                             EFontStyle.ITALIC,
+                             EFontWeight.LIGHT,
+                             "fonts/ttf/AlegreyaSans/AlegreyaSans-LightItalic.ttf"),
+  ALGREYA_SANS_NORMAL ("Alegreya Sans",
+                       EFontType.TTF,
+                       EFontStyle.REGULAR,
+                       EFontWeight.REGULAR,
+                       "fonts/ttf/AlegreyaSans/AlegreyaSans-Regular.ttf"),
+  ALGREYA_SANS_NORMAL_ITALIC ("Alegreya Sans",
+                              EFontType.TTF,
+                              EFontStyle.ITALIC,
+                              EFontWeight.REGULAR,
+                              "fonts/ttf/AlegreyaSans/AlegreyaSans-Italic.ttf"),
+  ALGREYA_SANS_MEDIUM ("Alegreya Sans",
+                       EFontType.TTF,
+                       EFontStyle.REGULAR,
+                       EFontWeight.MEDIUM,
+                       "fonts/ttf/AlegreyaSans/AlegreyaSans-Medium.ttf"),
+  ALGREYA_SANS_MEDIUM_ITALIC ("Alegreya Sans",
+                              EFontType.TTF,
+                              EFontStyle.ITALIC,
+                              EFontWeight.MEDIUM,
+                              "fonts/ttf/AlegreyaSans/AlegreyaSans-MediumItalic.ttf"),
+  ALGREYA_SANS_BOLD ("Alegreya Sans",
+                     EFontType.TTF,
+                     EFontStyle.REGULAR,
+                     EFontWeight.BOLD,
+                     "fonts/ttf/AlegreyaSans/AlegreyaSans-Bold.ttf"),
+  ALGREYA_SANS_BOLD_ITALIC ("Alegreya Sans",
+                            EFontType.TTF,
+                            EFontStyle.ITALIC,
+                            EFontWeight.BOLD,
+                            "fonts/ttf/AlegreyaSans/AlegreyaSans-BoldItalic.ttf"),
+  ALGREYA_SANS_EXTRA_BOLD ("Alegreya Sans",
+                           EFontType.TTF,
+                           EFontStyle.REGULAR,
+                           EFontWeight.EXTRA_BOLD,
+                           "fonts/ttf/AlegreyaSans/AlegreyaSans-ExtraBold.ttf"),
+  ALGREYA_SANS_EXTRA_BOLD_ITALIC ("Alegreya Sans",
+                                  EFontType.TTF,
+                                  EFontStyle.ITALIC,
+                                  EFontWeight.EXTRA_BOLD,
+                                  "fonts/ttf/AlegreyaSans/AlegreyaSans-ExtraBoldItalic.ttf"),
+  ALGREYA_SANS_BLACK ("Alegreya Sans",
+                      EFontType.TTF,
+                      EFontStyle.REGULAR,
+                      EFontWeight.BLACK,
+                      "fonts/ttf/AlegreyaSans/AlegreyaSans-Black.ttf"),
+  ALGREYA_SANS_BLACK_ITALIC ("Alegreya Sans",
+                             EFontType.TTF,
+                             EFontStyle.ITALIC,
+                             EFontWeight.BLACK,
+                             "fonts/ttf/AlegreyaSans/AlegreyaSans-BlackItalic.ttf");
 
   private final FontResource m_aRes;
 

@@ -34,6 +34,7 @@ import com.helger.commons.string.ToStringGenerator;
  */
 public class FontResource implements IFontResource
 {
+  private final String m_sID;
   private final String m_sFontName;
   private final EFontType m_eFontType;
   private final IFontStyle m_aFontStyle;
@@ -51,6 +52,14 @@ public class FontResource implements IFontResource
     m_aFontStyle = ValueEnforcer.notNull (aFontStyle, "FontStyle");
     m_aFontWeight = ValueEnforcer.notNull (aFontWeight, "FontWeight");
     m_sPath = ValueEnforcer.notEmpty (sPath, "Path");
+    m_sID = sFontName + ":" + eFontType.getID () + ":" + aFontStyle.getID () + ":" + aFontWeight.getWeight ();
+  }
+
+  @Nonnull
+  @Nonempty
+  public String getID ()
+  {
+    return m_sID;
   }
 
   @Nonnull
@@ -105,28 +114,20 @@ public class FontResource implements IFontResource
     if (o == null || !getClass ().equals (o.getClass ()))
       return false;
     final FontResource rhs = (FontResource) o;
-    return m_sFontName.equals (rhs.m_sFontName) &&
-           m_eFontType.equals (rhs.m_eFontType) &&
-           m_aFontStyle.equals (rhs.m_aFontStyle) &&
-           m_aFontWeight.equals (rhs.m_aFontWeight) &&
-           m_sPath.equals (rhs.m_sPath);
+    return m_sID.equals (rhs.m_sID) && m_sPath.equals (rhs.m_sPath);
   }
 
   @Override
   public int hashCode ()
   {
-    return new HashCodeGenerator (this).append (m_sFontName)
-                                       .append (m_eFontType)
-                                       .append (m_aFontStyle)
-                                       .append (m_aFontWeight)
-                                       .append (m_sPath)
-                                       .getHashCode ();
+    return new HashCodeGenerator (this).append (m_sID).append (m_sPath).getHashCode ();
   }
 
   @Override
   public String toString ()
   {
-    return new ToStringGenerator (this).append ("FontName", m_sFontName)
+    return new ToStringGenerator (this).append ("ID", m_sID)
+                                       .append ("FontName", m_sFontName)
                                        .append ("FontType", m_eFontType)
                                        .append ("FontStyle", m_aFontStyle)
                                        .append ("FontWeight", m_aFontWeight)

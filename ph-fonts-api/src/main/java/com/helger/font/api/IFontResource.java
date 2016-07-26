@@ -21,6 +21,7 @@ import java.io.Serializable;
 import javax.annotation.Nonnull;
 
 import com.helger.commons.annotation.Nonempty;
+import com.helger.commons.id.IHasID;
 import com.helger.commons.io.IHasInputStream;
 import com.helger.commons.io.resource.IReadableResource;
 
@@ -29,7 +30,7 @@ import com.helger.commons.io.resource.IReadableResource;
  *
  * @author Philip Helger
  */
-public interface IFontResource extends IHasInputStream, Serializable
+public interface IFontResource extends IHasID <String>, IHasInputStream, Serializable
 {
   /**
    * @return The overall font name.

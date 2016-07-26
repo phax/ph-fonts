@@ -26,27 +26,56 @@ import com.helger.font.api.FontResource;
 import com.helger.font.api.IFontResource;
 import com.helger.font.api.IFontStyle;
 import com.helger.font.api.IFontWeight;
+import com.helger.font.api.IHasFontResource;
 
 /**
  * Defines the available font resources available in this library.
  *
  * @author Philip Helger
  */
-public enum EFontResourceRoboto
+public enum EFontResourceRoboto implements IHasFontResource
 {
   // Roboto (Apache License v2.0)
   ROBOTO_THIN ("Roboto", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/ttf/Roboto/Roboto-Thin.ttf"),
-  ROBOTO_THIN_ITALIC ("Roboto", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.THIN, "fonts/ttf/Roboto/Roboto-ThinItalic.ttf"),
+  ROBOTO_THIN_ITALIC ("Roboto",
+                      EFontType.TTF,
+                      EFontStyle.ITALIC,
+                      EFontWeight.THIN,
+                      "fonts/ttf/Roboto/Roboto-ThinItalic.ttf"),
   ROBOTO_LIGHT ("Roboto", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.LIGHT, "fonts/ttf/Roboto/Roboto-Light.ttf"),
-  ROBOTO_LIGHT_ITALIC ("Roboto", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.LIGHT, "fonts/ttf/Roboto/Roboto-LightItalic.ttf"),
-  ROBOTO_NORMAL ("Roboto", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.REGULAR, "fonts/ttf/Roboto/Roboto-Regular.ttf"),
-  ROBOTO_NORMAL_ITALIC ("Roboto", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.REGULAR, "fonts/ttf/Roboto/Roboto-Italic.ttf"),
+  ROBOTO_LIGHT_ITALIC ("Roboto",
+                       EFontType.TTF,
+                       EFontStyle.ITALIC,
+                       EFontWeight.LIGHT,
+                       "fonts/ttf/Roboto/Roboto-LightItalic.ttf"),
+  ROBOTO_NORMAL ("Roboto",
+                 EFontType.TTF,
+                 EFontStyle.REGULAR,
+                 EFontWeight.REGULAR,
+                 "fonts/ttf/Roboto/Roboto-Regular.ttf"),
+  ROBOTO_NORMAL_ITALIC ("Roboto",
+                        EFontType.TTF,
+                        EFontStyle.ITALIC,
+                        EFontWeight.REGULAR,
+                        "fonts/ttf/Roboto/Roboto-Italic.ttf"),
   ROBOTO_MEDIUM ("Roboto", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.MEDIUM, "fonts/ttf/Roboto/Roboto-Medium.ttf"),
-  ROBOTO_MEDIUM_ITALIC ("Roboto", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.MEDIUM, "fonts/ttf/Roboto/Roboto-MediumItalic.ttf"),
+  ROBOTO_MEDIUM_ITALIC ("Roboto",
+                        EFontType.TTF,
+                        EFontStyle.ITALIC,
+                        EFontWeight.MEDIUM,
+                        "fonts/ttf/Roboto/Roboto-MediumItalic.ttf"),
   ROBOTO_BOLD ("Roboto", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BOLD, "fonts/ttf/Roboto/Roboto-Bold.ttf"),
-  ROBOTO_BOLD_ITALIC ("Roboto", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.BOLD, "fonts/ttf/Roboto/Roboto-BoldItalic.ttf"),
+  ROBOTO_BOLD_ITALIC ("Roboto",
+                      EFontType.TTF,
+                      EFontStyle.ITALIC,
+                      EFontWeight.BOLD,
+                      "fonts/ttf/Roboto/Roboto-BoldItalic.ttf"),
   ROBOTO_BLACK ("Roboto", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BLACK, "fonts/ttf/Roboto/Roboto-Black.ttf"),
-  ROBOTO_BLACK_ITALIC ("Roboto", EFontType.TTF, EFontStyle.ITALIC, EFontWeight.BLACK, "fonts/ttf/Roboto/Roboto-BlackItalic.ttf");
+  ROBOTO_BLACK_ITALIC ("Roboto",
+                       EFontType.TTF,
+                       EFontStyle.ITALIC,
+                       EFontWeight.BLACK,
+                       "fonts/ttf/Roboto/Roboto-BlackItalic.ttf");
 
   private final FontResource m_aRes;
 

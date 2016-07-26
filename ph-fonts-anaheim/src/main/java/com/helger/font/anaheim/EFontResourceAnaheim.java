@@ -26,16 +26,21 @@ import com.helger.font.api.FontResource;
 import com.helger.font.api.IFontResource;
 import com.helger.font.api.IFontStyle;
 import com.helger.font.api.IFontWeight;
+import com.helger.font.api.IHasFontResource;
 
 /**
  * Defines the available font resources available in this library.
  *
  * @author Philip Helger
  */
-public enum EFontResourceAnaheim
+public enum EFontResourceAnaheim implements IHasFontResource
 {
   // Anaheim (SIL Open Font License, 1.1)
-  ANAHEIM_REGULAR ("Anaheim", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.REGULAR, "fonts/ttf/Anaheim/Anaheim-Regular.ttf");
+  ANAHEIM_REGULAR ("Anaheim",
+                   EFontType.TTF,
+                   EFontStyle.REGULAR,
+                   EFontWeight.REGULAR,
+                   "fonts/ttf/Anaheim/Anaheim-Regular.ttf");
 
   private final FontResource m_aRes;
 

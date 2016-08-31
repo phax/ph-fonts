@@ -28,7 +28,7 @@ import com.helger.commons.collection.ext.ICommonsSet;
  *
  * @author Philip Helger
  */
-public final class EFontResourceTest
+public final class EFontResourceLato2Test
 {
   @Test
   public void testBasic ()

@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.font.alegreya_sans;
+package com.helger.font.roboto;
 
 import static org.junit.Assert.assertTrue;
 
@@ -24,17 +24,17 @@ import com.helger.commons.collection.ext.CommonsHashSet;
 import com.helger.commons.collection.ext.ICommonsSet;
 
 /**
- * Test class for class {@link EFontResourceAlegreyaSans}.
+ * Test class for class {@link EFontResourceRoboto}.
  *
  * @author Philip Helger
  */
-public final class EFontResourceTest
+public final class EFontResourceRobotoTest
 {
   @Test
   public void testBasic ()
   {
     final ICommonsSet <String> aUniquePaths = new CommonsHashSet<> ();
-    for (final EFontResourceAlegreyaSans e : EFontResourceAlegreyaSans.values ())
+    for (final EFontResourceRoboto e : EFontResourceRoboto.values ())
     {
       assertTrue (e.name (), e.getFontResource ().getResource ().exists ());
       assertTrue (e.name (), aUniquePaths.add (e.getFontResource ().getResource ().getPath ()));

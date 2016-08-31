@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.font.anaheim;
+package com.helger.font.alegreya_sans;
 
 import static org.junit.Assert.assertTrue;
 
@@ -24,17 +24,17 @@ import com.helger.commons.collection.ext.CommonsHashSet;
 import com.helger.commons.collection.ext.ICommonsSet;
 
 /**
- * Test class for class {@link EFontResourceAnaheim}.
+ * Test class for class {@link EFontResourceAlegreyaSans}.
  *
  * @author Philip Helger
  */
-public final class EFontResourceTest
+public final class EFontResourceAlegreyaSansTest
 {
   @Test
   public void testBasic ()
   {
     final ICommonsSet <String> aUniquePaths = new CommonsHashSet<> ();
-    for (final EFontResourceAnaheim e : EFontResourceAnaheim.values ())
+    for (final EFontResourceAlegreyaSans e : EFontResourceAlegreyaSans.values ())
     {
       assertTrue (e.name (), e.getFontResource ().getResource ().exists ());
       assertTrue (e.name (), aUniquePaths.add (e.getFontResource ().getResource ().getPath ()));

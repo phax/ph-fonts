@@ -62,6 +62,6 @@ public class FontWeight implements IFontWeight
   @Override
   public String toString ()
   {
-    return new ToStringGenerator (this).append ("Weight", m_nWeight).toString ();
+    return new ToStringGenerator (this).append ("Weight", m_nWeight).getToString ();
   }
 }

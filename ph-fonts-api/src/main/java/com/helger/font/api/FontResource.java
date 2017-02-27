@@ -132,6 +132,6 @@ public class FontResource implements IFontResource
                                        .append ("FontStyle", m_aFontStyle)
                                        .append ("FontWeight", m_aFontWeight)
                                        .append ("Path", m_sPath)
-                                       .toString ();
+                                       .getToString ();
   }
 }

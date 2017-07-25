@@ -5,6 +5,8 @@ It wraps the TTF/OTF files in a Java resource and provides reasonable APIs.
 
 # News and noteworthy
 
+  * v4.0.0 - work in progress
+    * Updated to ph-commons 9.0.0
   * v3.1.1 - 2016-07-26
     * Updated to ph-commons 8.2.x
   * v3.1.0 - 2016-06-29

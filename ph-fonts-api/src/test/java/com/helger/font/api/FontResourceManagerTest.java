@@ -22,8 +22,6 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.helger.commons.filter.IFilter;
-
 /**
  * Test class for class {@link FontResourceManager}.
  *
@@ -37,7 +35,7 @@ public final class FontResourceManagerTest
     assertEquals (0, FontResourceManager.getRegisteredResourceCount ());
     assertNotNull (FontResourceManager.getAllResources ());
     assertTrue (FontResourceManager.getAllResources ().isEmpty ());
-    assertTrue (FontResourceManager.getAllResources (IFilter.all ()).isEmpty ());
-    assertTrue (FontResourceManager.getAllResources (IFilter.none ()).isEmpty ());
+    assertTrue (FontResourceManager.getAllResources (x -> true).isEmpty ());
+    assertTrue (FontResourceManager.getAllResources (x -> false).isEmpty ());
   }
 }

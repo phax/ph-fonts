@@ -106,6 +106,11 @@ public class FontResource implements IFontResource
     return ClassPathResource.getInputStream (m_sPath);
   }
 
+  public boolean isReadMultiple ()
+  {
+    return true;
+  }
+
   @Override
   public boolean equals (@Nullable final Object o)
   {

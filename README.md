@@ -5,7 +5,7 @@ It wraps the TTF/OTF files in a Java resource and provides reasonable APIs.
 
 # News and noteworthy
 
-  * v4.0.0 - work in progress
+  * v4.0.0 - 2017-11-05
     * Updated to ph-commons 9.0.0
   * v3.1.1 - 2016-07-26
     * Updated to ph-commons 8.2.x
@@ -21,16 +21,15 @@ It wraps the TTF/OTF files in a Java resource and provides reasonable APIs.
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-fonts-api</artifactId>
-  <version>3.1.1</version>
+  <version>4.0.0</version>
 </dependency>
 
 <dependency>
   <groupId>com.helger</groupId>
   <!-- replace XXX with one of the list below --> 
   <artifactId>XXX</artifactId>
-  <version>3.1.1</version>
+  <version>4.0.0</version>
 </dependency>
-...
 ```
 
 Available artefacts including the fonts are:
@@ -42,7 +41,7 @@ Available artefacts including the fonts are:
   * ph-fonts-roboto
 
 To add a different font using ph-fonts-api just use one of the above mentioned projects.
-Should be quite self explanatory :)
+Should be quite self explanatory.
 
 ---
 

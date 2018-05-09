@@ -5,15 +5,17 @@ It wraps the TTF/OTF files in a Java resource and provides reasonable APIs.
 
 # News and noteworthy
 
-  * v4.0.0 - 2017-11-05
+* v4.0.1 - work in progress
+    * Fixed OSGI ServiceProvider configuration
+* v4.0.0 - 2017-11-05
     * Updated to ph-commons 9.0.0
-  * v3.1.1 - 2016-07-26
+* v3.1.1 - 2016-07-26
     * Updated to ph-commons 8.2.x
-  * v3.1.0 - 2016-06-29
+* v3.1.0 - 2016-06-29
     * Updated to ph-commons 8.1.x
-  * v3.0.0 - 2016-06-10
+* v3.0.0 - 2016-06-10
     * Requires JDK 8
-  * v2.1.0 - 2015-12-01
+* v2.1.0 - 2015-12-01
     * Introducing a completely new layout so there is a common "ph-fonts-api" project and per font a sub-project so that the amount of loaded data can be kept quite small.
 
 # Usage with Maven

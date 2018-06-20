@@ -19,7 +19,7 @@ package com.helger.font.open_sans;
 import javax.annotation.Nonnull;
 
 import com.helger.commons.annotation.IsSPIImplementation;
-import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.font.api.IFontResource;
 import com.helger.font.api.IFontResourceProviderSPI;
 
@@ -34,6 +34,6 @@ public final class FontResourceProviderSPI implements IFontResourceProviderSPI
   @Nonnull
   public Iterable <? extends IFontResource> getAllFontResources ()
   {
-    return CollectionHelper.newListMapped (EFontResourceOpenSans.values (), e -> e.getFontResource ());
+    return new CommonsArrayList <> (EFontResourceOpenSans.values (), EFontResourceOpenSans::getFontResource);
   }
 }

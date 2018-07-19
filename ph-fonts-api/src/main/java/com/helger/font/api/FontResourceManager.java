@@ -44,7 +44,7 @@ import com.helger.commons.string.StringHelper;
 @ThreadSafe
 public final class FontResourceManager
 {
-  private static final Logger s_aLogger = LoggerFactory.getLogger (FontResourceManager.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger (FontResourceManager.class);
   private static final SimpleReadWriteLock s_aRWLock = new SimpleReadWriteLock ();
   @GuardedBy ("s_aRWLock")
   private static final ICommonsOrderedSet <IFontResource> s_aItems = new CommonsLinkedHashSet <> ();
@@ -73,15 +73,15 @@ public final class FontResourceManager
         // Register all font resources of the current provider
         for (final IFontResource aFontResource : aProvider.getAllFontResources ())
           if (!s_aItems.add (aFontResource))
-            s_aLogger.warn ("Failed to register font resource " +
+            LOGGER.warn ("Failed to register font resource " +
                             aFontResource +
                             " because this resource is already contained!");
       }
 
       if (s_aItems.isEmpty ())
-        s_aLogger.info ("No font resources available for registration!");
+        LOGGER.info ("No font resources available for registration!");
       else
-        s_aLogger.info ("Successfully registered " + s_aItems.size () + " font resources!");
+        LOGGER.info ("Successfully registered " + s_aItems.size () + " font resources!");
     });
   }
 

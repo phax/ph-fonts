@@ -13,6 +13,8 @@ It wraps the TTF/OTF files in a Java resource and provides reasonable APIs.
     * Updated `Open Sans` TTFs
     * Updated `Lato2` OTFs to v2.015
     * Updated `Exo2` to use TTF
+    * Updated `Anaheim` TTFs
+    * Updated `Alegreya Sans` TTFs
 * v4.0.0 - 2017-11-05
     * Updated to ph-commons 9.0.0
 * v3.1.1 - 2016-07-26

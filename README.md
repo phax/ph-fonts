@@ -11,6 +11,7 @@ It wraps the TTF/OTF files in a Java resource and provides reasonable APIs.
     * Added new font `Source Sans Pro` in artefact `ph-fonts-source-sans-pro`
     * Updated `Roboto` TTFs
     * Updated `Open Sans` TTFs
+    * Updated `Lato2` OTFs to v2.015
 * v4.0.0 - 2017-11-05
     * Updated to ph-commons 9.0.0
 * v3.1.1 - 2016-07-26

@@ -12,6 +12,7 @@ It wraps the TTF/OTF files in a Java resource and provides reasonable APIs.
     * Updated `Roboto` TTFs
     * Updated `Open Sans` TTFs
     * Updated `Lato2` OTFs to v2.015
+    * Updated `Exo2` to use TTF
 * v4.0.0 - 2017-11-05
     * Updated to ph-commons 9.0.0
 * v3.1.1 - 2016-07-26

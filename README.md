@@ -5,7 +5,7 @@ It wraps the TTF/OTF files in a Java resource and provides reasonable APIs.
 
 # News and noteworthy
 
-* v4.0.1 - work in progress
+* v4.0.1 - 2018-08-22
     * Really fixed OSGI ServiceProvider configuration
     * Fixed OSGI ServiceProvider configuration
     * Added new font `Source Sans Pro` in artefact `ph-fonts-source-sans-pro`
@@ -31,14 +31,14 @@ It wraps the TTF/OTF files in a Java resource and provides reasonable APIs.
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-fonts-api</artifactId>
-  <version>4.0.0</version>
+  <version>4.0.1</version>
 </dependency>
 
 <dependency>
   <groupId>com.helger</groupId>
   <!-- replace XXX with one of the list below --> 
   <artifactId>XXX</artifactId>
-  <version>4.0.0</version>
+  <version>4.0.1</version>
 </dependency>
 ```
 

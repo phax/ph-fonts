@@ -9,6 +9,7 @@ It wraps the TTF/OTF files in a Java resource and provides reasonable APIs.
     * Really fixed OSGI ServiceProvider configuration
     * Fixed OSGI ServiceProvider configuration
     * Added new font `Source Sans Pro` in artefact `ph-fonts-source-sans-pro`
+    * Updated `Roboto` TTFs
 * v4.0.0 - 2017-11-05
     * Updated to ph-commons 9.0.0
 * v3.1.1 - 2016-07-26

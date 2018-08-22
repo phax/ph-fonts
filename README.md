@@ -8,6 +8,7 @@ It wraps the TTF/OTF files in a Java resource and provides reasonable APIs.
 * v4.0.1 - work in progress
     * Really fixed OSGI ServiceProvider configuration
     * Fixed OSGI ServiceProvider configuration
+    * Added new font `Source Sans Pro` in artefact `ph-fonts-source-sans-pro`
 * v4.0.0 - 2017-11-05
     * Updated to ph-commons 9.0.0
 * v3.1.1 - 2016-07-26
@@ -42,6 +43,7 @@ Available artefacts including the fonts are:
   * ph-fonts-lato2
   * ph-fonts-open-sans
   * ph-fonts-roboto
+  * ph-fonts-source-sans-pro (since v4.0.1)
 
 To add a different font using ph-fonts-api just use one of the above mentioned projects.
 Should be quite self explanatory.

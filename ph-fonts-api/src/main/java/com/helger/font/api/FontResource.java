@@ -19,7 +19,6 @@ package com.helger.font.api;
 import java.io.InputStream;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 import com.helger.commons.ValueEnforcer;
 import com.helger.commons.annotation.Nonempty;
@@ -112,7 +111,7 @@ public class FontResource implements IFontResource
   }
 
   @Override
-  public boolean equals (@Nullable final Object o)
+  public boolean equals (final Object o)
   {
     if (o == this)
       return true;

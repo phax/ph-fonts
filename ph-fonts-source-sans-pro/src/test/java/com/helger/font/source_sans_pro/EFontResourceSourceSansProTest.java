@@ -22,7 +22,6 @@ import org.junit.Test;
 
 import com.helger.commons.collection.impl.CommonsHashSet;
 import com.helger.commons.collection.impl.ICommonsSet;
-import com.helger.font.source_sans_pro.EFontResourceSourceSansPro;
 
 /**
  * Test class for class {@link EFontResourceSourceSansPro}.
@@ -34,7 +33,7 @@ public final class EFontResourceSourceSansProTest
   @Test
   public void testBasic ()
   {
-    final ICommonsSet <String> aUniquePaths = new CommonsHashSet<> ();
+    final ICommonsSet <String> aUniquePaths = new CommonsHashSet <> ();
     for (final EFontResourceSourceSansPro e : EFontResourceSourceSansPro.values ())
     {
       assertTrue (e.name (), e.getFontResource ().getResource ().exists ());

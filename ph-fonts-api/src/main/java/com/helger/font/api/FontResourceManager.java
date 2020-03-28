@@ -74,8 +74,8 @@ public final class FontResourceManager
         for (final IFontResource aFontResource : aProvider.getAllFontResources ())
           if (!s_aItems.add (aFontResource))
             LOGGER.warn ("Failed to register font resource " +
-                            aFontResource +
-                            " because this resource is already contained!");
+                         aFontResource +
+                         " because this resource is already contained!");
       }
 
       if (s_aItems.isEmpty ())
@@ -91,7 +91,7 @@ public final class FontResourceManager
   @Nonnegative
   public static int getRegisteredResourceCount ()
   {
-    return s_aRWLock.readLocked ( () -> s_aItems.size ());
+    return s_aRWLock.readLockedInt (s_aItems::size);
   }
 
   /**
@@ -102,7 +102,7 @@ public final class FontResourceManager
   @ReturnsMutableCopy
   public static ICommonsOrderedSet <IFontResource> getAllResources ()
   {
-    return s_aRWLock.readLocked ( () -> s_aItems.getClone ());
+    return s_aRWLock.readLockedGet (s_aItems::getClone);
   }
 
   /**
@@ -119,7 +119,7 @@ public final class FontResourceManager
     if (aFilter == null)
       return getAllResources ();
 
-    return s_aRWLock.readLocked ( () -> CollectionHelper.newOrderedSet (s_aItems, aFilter));
+    return s_aRWLock.readLockedGet ( () -> CollectionHelper.newOrderedSet (s_aItems, aFilter));
   }
 
   @Nonnull

@@ -5,6 +5,8 @@ It wraps the TTF/OTF files in a Java resource and provides reasonable APIs.
 
 # News and noteworthy
 
+* v4.0.2 - work in progress
+    * Updated to ph-commons 9.4.0
 * v4.0.1 - 2018-08-22
     * Really fixed OSGI ServiceProvider configuration
     * Fixed OSGI ServiceProvider configuration

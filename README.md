@@ -5,7 +5,7 @@ It wraps the TTF/OTF files in a Java resource and provides reasonable APIs.
 
 # News and noteworthy
 
-* v4.0.2 - work in progress
+* v4.0.2 - 2020-03-28
     * Updated to ph-commons 9.4.0
 * v4.0.1 - 2018-08-22
     * Really fixed OSGI ServiceProvider configuration
@@ -29,18 +29,19 @@ It wraps the TTF/OTF files in a Java resource and provides reasonable APIs.
     * Introducing a completely new layout so there is a common "ph-fonts-api" project and per font a sub-project so that the amount of loaded data can be kept quite small.
 
 # Usage with Maven
+
 ```xml
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-fonts-api</artifactId>
-  <version>4.0.1</version>
+  <version>4.0.2</version>
 </dependency>
 
 <dependency>
   <groupId>com.helger</groupId>
   <!-- replace XXX with one of the list below --> 
   <artifactId>XXX</artifactId>
-  <version>4.0.1</version>
+  <version>4.0.2</version>
 </dependency>
 ```
 

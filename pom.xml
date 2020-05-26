@@ -24,8 +24,9 @@
     <artifactId>parent-pom</artifactId>
     <version>1.11.1</version>
   </parent>
+  <groupId>com.helger.font</groupId>
   <artifactId>ph-fonts-parent-pom</artifactId>
-  <version>4.0.3-SNAPSHOT</version>
+  <version>4.1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>ph-fonts-parent-pom</name>
   <description>Base POM to build the ph-fonts projects</description>
@@ -72,42 +73,42 @@
       </dependency>
 
       <dependency>
-        <groupId>com.helger</groupId>
+        <groupId>com.helger.font</groupId>
         <artifactId>ph-fonts-api</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.helger</groupId>
+        <groupId>com.helger.font</groupId>
         <artifactId>ph-fonts-alegreya-sans</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.helger</groupId>
+        <groupId>com.helger.font</groupId>
         <artifactId>ph-fonts-anaheim</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.helger</groupId>
+        <groupId>com.helger.font</groupId>
         <artifactId>ph-fonts-exo2</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.helger</groupId>
+        <groupId>com.helger.font</groupId>
         <artifactId>ph-fonts-lato2</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.helger</groupId>
+        <groupId>com.helger.font</groupId>
         <artifactId>ph-fonts-open-sans</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.helger</groupId>
+        <groupId>com.helger.font</groupId>
         <artifactId>ph-fonts-roboto</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.helger</groupId>
+        <groupId>com.helger.font</groupId>
         <artifactId>ph-fonts-source-sans-pro</artifactId>
         <version>${project.version}</version>
       </dependency>

@@ -38,6 +38,8 @@ Should be quite self explanatory.
 
 # News and noteworthy
 
+* v4.1.1 - 2020-06-15
+    * Added new font `Markazi Text` for Arabic characters ([issue #1](https://github.com/phax/ph-fonts/issues/1))
 * v4.1.0 - 2020-05-26
     * Changed the "groupId" of the Maven artefacts to `com.helger.font`
 * v4.0.2 - 2020-03-28

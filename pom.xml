@@ -99,6 +99,11 @@
       </dependency>
       <dependency>
         <groupId>com.helger.font</groupId>
+        <artifactId>ph-fonts-markazi</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.helger.font</groupId>
         <artifactId>ph-fonts-open-sans</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -140,6 +145,7 @@
     <module>ph-fonts-anaheim</module>
     <module>ph-fonts-exo2</module>
     <module>ph-fonts-lato2</module>
+    <module>ph-fonts-markazi</module>
     <module>ph-fonts-open-sans</module>
     <module>ph-fonts-roboto</module>
     <module>ph-fonts-source-sans-pro</module>

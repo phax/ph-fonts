@@ -36,26 +36,26 @@ import com.helger.font.api.IHasFontResource;
 public enum EFontResourceMarkazi implements IHasFontResource
 {
   // Markazi (Open Font License)
-  LATO2_NORMAL ("Markazi Text",
-                EFontType.OTF,
+  MARKAZI_NORMAL ("Markazi Text",
+                  EFontType.TTF,
+                  EFontStyle.REGULAR,
+                  EFontWeight.REGULAR,
+                  "fonts/ttf/Markazi/MarkaziText-Regular.ttf"),
+  MARKAZI_MEDIUM ("Markazi Text",
+                  EFontType.TTF,
+                  EFontStyle.REGULAR,
+                  EFontWeight.MEDIUM,
+                  "fonts/ttf/Markazi/MarkaziText-Medium.ttf"),
+  MARKAZI_SEMI_BOLD ("Markazi Text",
+                     EFontType.TTF,
+                     EFontStyle.REGULAR,
+                     EFontWeight.SEMI_BOLD,
+                     "fonts/ttf/Markazi/MarkaziText-SemiBold.ttf"),
+  MARKAZI_BOLD ("Markazi Text",
+                EFontType.TTF,
                 EFontStyle.REGULAR,
-                EFontWeight.REGULAR,
-                "fonts/ttf/Markazi/MarkaziText-Regular.ttf"),
-  LATO2_MEDIUM ("Markazi Text",
-                EFontType.OTF,
-                EFontStyle.REGULAR,
-                EFontWeight.MEDIUM,
-                "fonts/ttf/Markazi/MarkaziText-Medium.ttf"),
-  LATO2_SEMI_BOLD ("Markazi Text",
-                   EFontType.OTF,
-                   EFontStyle.REGULAR,
-                   EFontWeight.SEMI_BOLD,
-                   "fonts/ttf/Markazi/MarkaziText-Semibold.ttf"),
-  LATO2_BOLD ("Markazi Text",
-              EFontType.OTF,
-              EFontStyle.REGULAR,
-              EFontWeight.BOLD,
-              "fonts/ttf/Markazi/MarkaziText-Bold.ttf");
+                EFontWeight.BOLD,
+                "fonts/ttf/Markazi/MarkaziText-Bold.ttf");
 
   private final FontResource m_aRes;
 

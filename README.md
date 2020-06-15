@@ -5,7 +5,7 @@ It wraps the TTF/OTF files in a Java resource and provides reasonable APIs.
 
 # Usage with Maven
 
-Add the following to your pom.xml to use this project (replacing `x.y.z` with the real version number): 
+Add the following to your pom.xml to use this project, replacing `x.y.z` with the real version number: 
 
 ```xml
 <dependency>
@@ -22,13 +22,14 @@ Add the following to your pom.xml to use this project (replacing `x.y.z` with th
 </dependency>
 ```
 
-Note: prior to v2.3.0 the Maven groupId was `com.helger`.
+Note: prior to v4.1.0 the Maven groupId was `com.helger`.
 
 Available artefacts including the fonts are:
   * ph-fonts-alegreya-sans
   * ph-fonts-anaheim
   * ph-fonts-exo2
   * ph-fonts-lato2
+  * ph-fonts-markazi (since v4.1.1)
   * ph-fonts-open-sans
   * ph-fonts-roboto
   * ph-fonts-source-sans-pro (since v4.0.1)

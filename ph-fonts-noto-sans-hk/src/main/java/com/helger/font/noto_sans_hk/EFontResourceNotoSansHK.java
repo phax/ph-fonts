@@ -36,16 +36,16 @@ import com.helger.font.api.IHasFontResource;
 public enum EFontResourceNotoSansHK implements IHasFontResource
 {
   // Noto Sans HK (Open Font License)
-  NOTO_SANS_HK_THIN ("Noto Sans HK", EFontType.OTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/otf/NotoSansHK/NotoSansHK-Thin.otf"),
-  NOTO_SANS_HK_LIGHT ("Noto Sans HK", EFontType.OTF, EFontStyle.REGULAR, EFontWeight.LIGHT, "fonts/otf/NotoSansHK/NotoSansHK-Light.otf"),
+  NOTO_SANS_HK_THIN ("Noto Sans HK", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/ttf/NotoSansHK/NotoSansHK-Thin.ttf"),
+  NOTO_SANS_HK_LIGHT ("Noto Sans HK", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.LIGHT, "fonts/ttf/NotoSansHK/NotoSansHK-Light.ttf"),
   NOTO_SANS_HK_REGULAR ("Noto Sans HK",
-                        EFontType.OTF,
+                        EFontType.TTF,
                         EFontStyle.REGULAR,
                         EFontWeight.REGULAR,
-                        "fonts/otf/NotoSansHK/NotoSansHK-Regular.otf"),
-  NOTO_SANS_HK_MEDIUM ("Noto Sans HK", EFontType.OTF, EFontStyle.REGULAR, EFontWeight.MEDIUM, "fonts/otf/NotoSansHK/NotoSansHK-Medium.otf"),
-  NOTO_SANS_HK_BOLD ("Noto Sans HK", EFontType.OTF, EFontStyle.REGULAR, EFontWeight.BOLD, "fonts/otf/NotoSansHK/NotoSansHK-Bold.otf"),
-  NOTO_SANS_HK_BLACK ("Noto Sans HK", EFontType.OTF, EFontStyle.REGULAR, EFontWeight.BLACK, "fonts/otf/NotoSansHK/NotoSansHK-Black.otf");
+                        "fonts/ttf/NotoSansHK/NotoSansHK-Regular.ttf"),
+  NOTO_SANS_HK_MEDIUM ("Noto Sans HK", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.MEDIUM, "fonts/ttf/NotoSansHK/NotoSansHK-Medium.ttf"),
+  NOTO_SANS_HK_BOLD ("Noto Sans HK", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BOLD, "fonts/ttf/NotoSansHK/NotoSansHK-Bold.ttf"),
+  NOTO_SANS_HK_BLACK ("Noto Sans HK", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BLACK, "fonts/ttf/NotoSansHK/NotoSansHK-Black.ttf");
 
   private final FontResource m_aRes;
 

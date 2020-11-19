@@ -30,6 +30,8 @@ Available artefacts including the fonts are:
   * ph-fonts-exo2
   * ph-fonts-lato2
   * ph-fonts-markazi (since v4.1.1)
+  * ph-fonts-noto-sans-hk (since v4.1.2)
+  * ph-fonts-noto-sans-sc (since v4.1.2)
   * ph-fonts-open-sans
   * ph-fonts-roboto
   * ph-fonts-source-sans-pro (since v4.0.1)
@@ -39,6 +41,8 @@ Should be quite self explanatory.
 
 # News and noteworthy
 
+* v4.1.2 - 2020-11-19
+    * Added new fonts `Noto Sans SC` and `Noto Sans HK` for Chinese characters (see https://github.com/phax/ph-pdf-layout/issues/19)
 * v4.1.1 - 2020-06-15
     * Added new font `Markazi Text` for Arabic characters ([issue #1](https://github.com/phax/ph-fonts/issues/1))
 * v4.1.0 - 2020-05-26

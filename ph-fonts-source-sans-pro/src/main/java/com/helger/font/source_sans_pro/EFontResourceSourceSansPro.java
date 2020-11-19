@@ -99,11 +99,11 @@ public enum EFontResourceSourceSansPro implements IHasFontResource
 
   private final FontResource m_aRes;
 
-  private EFontResourceSourceSansPro (@Nonnull @Nonempty final String sFontName,
-                                      @Nonnull final EFontType eFontType,
-                                      @Nonnull final IFontStyle aFontStyle,
-                                      @Nonnull final IFontWeight aFontWeight,
-                                      @Nonnull @Nonempty final String sPath)
+  EFontResourceSourceSansPro (@Nonnull @Nonempty final String sFontName,
+                              @Nonnull final EFontType eFontType,
+                              @Nonnull final IFontStyle aFontStyle,
+                              @Nonnull final IFontWeight aFontWeight,
+                              @Nonnull @Nonempty final String sPath)
   {
     m_aRes = new FontResource (sFontName, eFontType, aFontStyle, aFontWeight, sPath);
   }

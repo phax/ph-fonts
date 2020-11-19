@@ -36,24 +36,24 @@ import com.helger.font.api.IHasFontResource;
 public enum EFontResourceNotoSansSC implements IHasFontResource
 {
   // Noto Sans SC (Open Font License)
-  NOTO_SANS_SC_THIN ("Noto Sans SC", EFontType.OTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/ttf/NotoSansSC/NotoSansSC-Thin.otf"),
-  NOTO_SANS_SC_LIGHT ("Noto Sans SC", EFontType.OTF, EFontStyle.REGULAR, EFontWeight.LIGHT, "fonts/ttf/NotoSansSC/NotoSansSC-Light.otf"),
+  NOTO_SANS_SC_THIN ("Noto Sans SC", EFontType.OTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/otf/NotoSansSC/NotoSansSC-Thin.otf"),
+  NOTO_SANS_SC_LIGHT ("Noto Sans SC", EFontType.OTF, EFontStyle.REGULAR, EFontWeight.LIGHT, "fonts/otf/NotoSansSC/NotoSansSC-Light.otf"),
   NOTO_SANS_SC_REGULAR ("Noto Sans SC",
                         EFontType.OTF,
                         EFontStyle.REGULAR,
                         EFontWeight.REGULAR,
-                        "fonts/ttf/NotoSansSC/NotoSansSC-Regular.otf"),
-  NOTO_SANS_SC_MEDIUM ("Noto Sans SC", EFontType.OTF, EFontStyle.REGULAR, EFontWeight.MEDIUM, "fonts/ttf/NotoSansSC/NotoSansSC-Medium.otf"),
-  NOTO_SANS_SC_BOLD ("Noto Sans SC", EFontType.OTF, EFontStyle.REGULAR, EFontWeight.BOLD, "fonts/ttf/NotoSansSC/NotoSansSC-Bold.otf"),
-  NOTO_SANS_SC_BLACK ("Noto Sans SC", EFontType.OTF, EFontStyle.REGULAR, EFontWeight.BLACK, "fonts/ttf/NotoSansSC/NotoSansSC-Black.otf");
+                        "fonts/otf/NotoSansSC/NotoSansSC-Regular.otf"),
+  NOTO_SANS_SC_MEDIUM ("Noto Sans SC", EFontType.OTF, EFontStyle.REGULAR, EFontWeight.MEDIUM, "fonts/otf/NotoSansSC/NotoSansSC-Medium.otf"),
+  NOTO_SANS_SC_BOLD ("Noto Sans SC", EFontType.OTF, EFontStyle.REGULAR, EFontWeight.BOLD, "fonts/otf/NotoSansSC/NotoSansSC-Bold.otf"),
+  NOTO_SANS_SC_BLACK ("Noto Sans SC", EFontType.OTF, EFontStyle.REGULAR, EFontWeight.BLACK, "fonts/otf/NotoSansSC/NotoSansSC-Black.otf");
 
   private final FontResource m_aRes;
 
-  private EFontResourceNotoSansSC (@Nonnull @Nonempty final String sFontName,
-                                   @Nonnull final EFontType eFontType,
-                                   @Nonnull final IFontStyle aFontStyle,
-                                   @Nonnull final IFontWeight aFontWeight,
-                                   @Nonnull @Nonempty final String sPath)
+  EFontResourceNotoSansSC (@Nonnull @Nonempty final String sFontName,
+                           @Nonnull final EFontType eFontType,
+                           @Nonnull final IFontStyle aFontStyle,
+                           @Nonnull final IFontWeight aFontWeight,
+                           @Nonnull @Nonempty final String sPath)
   {
     m_aRes = new FontResource (sFontName, eFontType, aFontStyle, aFontWeight, sPath);
   }

@@ -36,7 +36,7 @@ public enum EFontStyle implements IFontStyle
 
   private final String m_sID;
 
-  private EFontStyle (@Nonnull @Nonempty final String sID)
+  EFontStyle (@Nonnull @Nonempty final String sID)
   {
     m_sID = sID;
   }

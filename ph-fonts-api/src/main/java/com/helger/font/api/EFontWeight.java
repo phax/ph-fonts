@@ -41,7 +41,7 @@ public enum EFontWeight implements IFontWeight
 
   private final int m_nWeight;
 
-  private EFontWeight (@Nonnegative final int nWeight)
+  EFontWeight (@Nonnegative final int nWeight)
   {
     m_nWeight = nWeight;
   }
@@ -59,8 +59,7 @@ public enum EFontWeight implements IFontWeight
   }
 
   @Nullable
-  public static EFontWeight getFromWeightOrDefault (@Nonnegative final int nWeight,
-                                                    @Nullable final EFontWeight eDefault)
+  public static EFontWeight getFromWeightOrDefault (@Nonnegative final int nWeight, @Nullable final EFontWeight eDefault)
   {
     return EnumHelper.findFirst (EFontWeight.class, x -> x.getWeight () == nWeight, eDefault);
   }

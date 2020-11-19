@@ -35,7 +35,7 @@ public enum EFontType implements IHasID <String>
 
   private final String m_sID;
 
-  private EFontType (@Nonnull @Nonempty final String sID)
+  EFontType (@Nonnull @Nonempty final String sID)
   {
     m_sID = sID;
   }

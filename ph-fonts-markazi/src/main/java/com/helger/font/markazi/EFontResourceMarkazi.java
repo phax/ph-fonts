@@ -36,34 +36,22 @@ import com.helger.font.api.IHasFontResource;
 public enum EFontResourceMarkazi implements IHasFontResource
 {
   // Markazi (Open Font License)
-  MARKAZI_NORMAL ("Markazi Text",
-                  EFontType.TTF,
-                  EFontStyle.REGULAR,
-                  EFontWeight.REGULAR,
-                  "fonts/ttf/Markazi/MarkaziText-Regular.ttf"),
-  MARKAZI_MEDIUM ("Markazi Text",
-                  EFontType.TTF,
-                  EFontStyle.REGULAR,
-                  EFontWeight.MEDIUM,
-                  "fonts/ttf/Markazi/MarkaziText-Medium.ttf"),
+  MARKAZI_NORMAL ("Markazi Text", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.REGULAR, "fonts/ttf/Markazi/MarkaziText-Regular.ttf"),
+  MARKAZI_MEDIUM ("Markazi Text", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.MEDIUM, "fonts/ttf/Markazi/MarkaziText-Medium.ttf"),
   MARKAZI_SEMI_BOLD ("Markazi Text",
                      EFontType.TTF,
                      EFontStyle.REGULAR,
                      EFontWeight.SEMI_BOLD,
                      "fonts/ttf/Markazi/MarkaziText-SemiBold.ttf"),
-  MARKAZI_BOLD ("Markazi Text",
-                EFontType.TTF,
-                EFontStyle.REGULAR,
-                EFontWeight.BOLD,
-                "fonts/ttf/Markazi/MarkaziText-Bold.ttf");
+  MARKAZI_BOLD ("Markazi Text", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BOLD, "fonts/ttf/Markazi/MarkaziText-Bold.ttf");
 
   private final FontResource m_aRes;
 
-  private EFontResourceMarkazi (@Nonnull @Nonempty final String sFontName,
-                                @Nonnull final EFontType eFontType,
-                                @Nonnull final IFontStyle aFontStyle,
-                                @Nonnull final IFontWeight aFontWeight,
-                                @Nonnull @Nonempty final String sPath)
+  EFontResourceMarkazi (@Nonnull @Nonempty final String sFontName,
+                        @Nonnull final EFontType eFontType,
+                        @Nonnull final IFontStyle aFontStyle,
+                        @Nonnull final IFontWeight aFontWeight,
+                        @Nonnull @Nonempty final String sPath)
   {
     m_aRes = new FontResource (sFontName, eFontType, aFontStyle, aFontWeight, sPath);
   }

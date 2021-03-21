@@ -41,7 +41,7 @@ Should be quite self explanatory.
 
 # News and noteworthy
 
-* v4.1.3 - work in progress
+* v4.2.0 - 2021-03-21
     * Updated to ph-commons 10
 * v4.1.2 - 2020-11-19
     * Added new fonts `Noto Sans SC` and `Noto Sans HK` for Chinese characters (see https://github.com/phax/ph-pdf-layout/issues/19)

@@ -89,6 +89,7 @@
             <exclude>**/LICENSE</exclude>
             <exclude>**/NOTICE</exclude>
             <exclude>src/main/resources/fonts/**</exclude>
+            <exclude>src/test/resources/fonts/**</exclude>
           </excludes>
         </configuration>
       </plugin>

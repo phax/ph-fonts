@@ -41,6 +41,9 @@ Should be quite self explanatory.
 
 # News and noteworthy
 
+* v5.0.0 - 2022-09-13
+    * Requires Java 11 as the minimum version
+    * Updated to ph-commons 11
 * v4.2.0 - 2021-03-21
     * Updated to ph-commons 10
 * v4.1.2 - 2020-11-19

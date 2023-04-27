@@ -41,7 +41,7 @@ Should be quite self explanatory.
 
 # News and noteworthy
 
-* v5.0.1 - work in progress
+* v5.0.1 - 2023-04-27
     * Updated `Alegreya Sans` TTFs
     * Updated `Anaheim` TTFs
     * Updated `Exo2` TTFs

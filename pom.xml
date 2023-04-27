@@ -26,7 +26,7 @@
   </parent>
   <groupId>com.helger.font</groupId>
   <artifactId>ph-fonts-parent-pom</artifactId>
-  <version>5.0.2-SNAPSHOT</version>
+  <version>5.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>ph-fonts-parent-pom</name>
   <description>Base POM to build the ph-fonts projects</description>

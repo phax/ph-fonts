@@ -41,6 +41,8 @@ Should be quite self explanatory.
 
 # News and noteworthy
 
+* v5.0.1 - work in progress
+    * Updated `Alegreya Sans` TTFs
 * v5.0.0 - 2022-09-13
     * Requires Java 11 as the minimum version
     * Updated to ph-commons 11

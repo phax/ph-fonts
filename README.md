@@ -42,6 +42,7 @@ Should be quite self explanatory.
 # News and noteworthy
 
 * v5.0.1 - work in progress
+    * Updated `Markazi Text` TTFs
     * Updated `Exo2` TTFs
     * Updated `Anaheim` TTFs
     * Updated `Alegreya Sans` TTFs

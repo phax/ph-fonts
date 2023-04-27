@@ -42,14 +42,16 @@ Should be quite self explanatory.
 # News and noteworthy
 
 * v5.0.1 - work in progress
-    * Updated `Open Sans` TTFs
-    * Added `Open Sans` Medium TTFs
+    * Updated `Alegreya Sans` TTFs
+    * Updated `Anaheim` TTFs
+    * Updated `Exo2` TTFs
+    * Updated `Markazi Text` TTFs
     * Updated `Noto Sans HK` TTFs
     * Updated `Noto Sans SC` TTFs
-    * Updated `Markazi Text` TTFs
-    * Updated `Exo2` TTFs
-    * Updated `Anaheim` TTFs
-    * Updated `Alegreya Sans` TTFs
+    * Updated `Open Sans` TTFs
+    * Added `Open Sans` Medium TTFs
+    * Updated `Roboto` TTFs
+    * Updated `Roboto Condensed` TTFs
 * v5.0.0 - 2022-09-13
     * Requires Java 11 as the minimum version
     * Updated to ph-commons 11

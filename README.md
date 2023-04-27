@@ -42,6 +42,8 @@ Should be quite self explanatory.
 # News and noteworthy
 
 * v5.0.1 - work in progress
+    * Updated `Open Sans` TTFs
+    * Added `Open Sans` Medium TTFs
     * Updated `Noto Sans HK` TTFs
     * Updated `Noto Sans SC` TTFs
     * Updated `Markazi Text` TTFs

@@ -52,6 +52,7 @@ Should be quite self explanatory.
     * Added `Open Sans` Medium TTFs
     * Updated `Roboto` TTFs
     * Updated `Roboto Condensed` TTFs
+    * Updated `Source Sans Pro` TTFs
 * v5.0.0 - 2022-09-13
     * Requires Java 11 as the minimum version
     * Updated to ph-commons 11

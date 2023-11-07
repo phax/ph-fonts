@@ -42,8 +42,8 @@
   </licenses>
   
   <scm>
-    <connection>scm:git:git@github.com:phax/ph-fonts.git</connection>
-    <developerConnection>scm:git:git@github.com:phax/ph-fonts.git</developerConnection>
+    <connection>scm:git:https://github.com/phax/ph-fonts.git</connection>
+    <developerConnection>scm:git:https://github.com/phax/ph-fonts.git</developerConnection>
     <url>http://github.com/phax/ph-fonts</url>
     <tag>HEAD</tag>
   </scm>

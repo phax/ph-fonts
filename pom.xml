@@ -137,6 +137,11 @@
         <artifactId>ph-fonts-source-sans-pro</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <groupId>com.helger.font</groupId>
+        <artifactId>ph-fonts-source-sans3</artifactId>
+        <version>${project.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -173,5 +178,6 @@
     <module>ph-fonts-open-sans</module>
     <module>ph-fonts-roboto</module>
     <module>ph-fonts-source-sans-pro</module>
+    <module>ph-fonts-source-sans3</module>
   </modules>
 </project>

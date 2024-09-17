@@ -3,6 +3,8 @@
 A set of TTF/OTF OSS fonts to be used in PDF creation or any other use case.
 It wraps the TTF/OTF files in a Java resource and provides reasonable APIs.
 
+The original use case was the easy support of fonts for https://github.com/phax/ph-pdf-layout/
+
 # Usage with Maven
 
 Add the following to your pom.xml to use this project, replacing `x.y.z` with the real version number: 
@@ -37,6 +39,7 @@ Available artefacts including the fonts are:
   * ph-fonts-open-sans
   * ph-fonts-roboto
   * ph-fonts-source-sans-pro (since v4.0.1)
+  * ph-fonts-source-sans3 (since v5.0.2)
 
 To add a different font using ph-fonts-api just use one of the above mentioned projects.
 Should be quite self explanatory.
@@ -45,6 +48,10 @@ Should be quite self explanatory.
 
 * v5.0.2 - 2023-09-17
     * Added support for `Kurinto Sans` and `Kurinto Mono`. See [#3](https://github.com/phax/ph-fonts/issues/3) - thx @erdincay
+    * Updated `Anaheim` TTFs
+    * Updated `Open Sans` TTFs
+    * Removed `Open Sans` Medium TTFs again
+    * Added support for `Source Sans3` as the successor font of `Source Sans Pro`
 * v5.0.1 - 2023-04-27
     * Updated `Alegreya Sans` TTFs. See [#2](https://github.com/phax/ph-fonts/issues/2) - thx @fheldt
     * Updated `Anaheim` TTFs

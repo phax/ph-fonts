@@ -94,6 +94,11 @@
       </dependency>
       <dependency>
         <groupId>com.helger.font</groupId>
+        <artifactId>ph-fonts-kurinto-sans</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.helger.font</groupId>
         <artifactId>ph-fonts-lato2</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -154,6 +159,7 @@
     <module>ph-fonts-alegreya-sans</module>
     <module>ph-fonts-anaheim</module>
     <module>ph-fonts-exo2</module>
+    <module>ph-fonts-kurinto-sans</module>
     <module>ph-fonts-lato2</module>
     <module>ph-fonts-markazi</module>
     <module>ph-fonts-noto-sans-hk</module>

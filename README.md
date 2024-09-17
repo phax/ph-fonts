@@ -29,6 +29,8 @@ Available artefacts including the fonts are:
   * ph-fonts-anaheim
   * ph-fonts-exo2
   * ph-fonts-lato2
+  * ph-fonts-kurinto-mono (since v5.0.2)
+  * ph-fonts-kurinto-sans (since v5.0.2)
   * ph-fonts-markazi (since v4.1.1)
   * ph-fonts-noto-sans-hk (since v4.1.2)
   * ph-fonts-noto-sans-sc (since v4.1.2)
@@ -41,8 +43,10 @@ Should be quite self explanatory.
 
 # News and noteworthy
 
+* v5.0.2 - 2023-09-17
+    * Added support for `Kurinto Sans` and `Kurinto Mono`. See [#3](https://github.com/phax/ph-fonts/issues/3) - thx @erdincay
 * v5.0.1 - 2023-04-27
-    * Updated `Alegreya Sans` TTFs
+    * Updated `Alegreya Sans` TTFs. See [#2](https://github.com/phax/ph-fonts/issues/2) - thx @fheldt
     * Updated `Anaheim` TTFs
     * Updated `Exo2` TTFs
     * Updated `Markazi Text` TTFs
@@ -59,9 +63,9 @@ Should be quite self explanatory.
 * v4.2.0 - 2021-03-21
     * Updated to ph-commons 10
 * v4.1.2 - 2020-11-19
-    * Added new fonts `Noto Sans SC` and `Noto Sans HK` for Chinese characters (see https://github.com/phax/ph-pdf-layout/issues/19)
+    * Added new fonts `Noto Sans SC` and `Noto Sans HK` for Chinese characters. see [ph-pdf-layout#19](https://github.com/phax/ph-pdf-layout/issues/19)
 * v4.1.1 - 2020-06-15
-    * Added new font `Markazi Text` for Arabic characters ([issue #1](https://github.com/phax/ph-fonts/issues/1))
+    * Added new font `Markazi Text` for Arabic characters. See [issue #1](https://github.com/phax/ph-fonts/issues/1) - thx @Sasan-Yavari
 * v4.1.0 - 2020-05-26
     * Changed the "groupId" of the Maven artefacts to `com.helger.font`
 * v4.0.2 - 2020-03-28

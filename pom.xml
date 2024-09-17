@@ -67,7 +67,7 @@
       <dependency>
         <groupId>com.helger.commons</groupId>
         <artifactId>ph-commons-parent-pom</artifactId>
-        <version>11.1.6</version>
+        <version>11.1.8</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -90,6 +90,11 @@
       <dependency>
         <groupId>com.helger.font</groupId>
         <artifactId>ph-fonts-exo2</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.helger.font</groupId>
+        <artifactId>ph-fonts-kurinto-mono</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
@@ -159,6 +164,7 @@
     <module>ph-fonts-alegreya-sans</module>
     <module>ph-fonts-anaheim</module>
     <module>ph-fonts-exo2</module>
+    <module>ph-fonts-kurinto-mono</module>
     <module>ph-fonts-kurinto-sans</module>
     <module>ph-fonts-lato2</module>
     <module>ph-fonts-markazi</module>

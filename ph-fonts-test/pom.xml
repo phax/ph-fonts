@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright (C) 2014-2024 Philip Helger (www.helger.com)
+    Copyright (C) 2024 Philip Helger (www.helger.com)
     philip[at]helger[dot]com
 
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,12 +24,12 @@
     <artifactId>ph-fonts-parent-pom</artifactId>
     <version>5.0.3-SNAPSHOT</version>
   </parent>
-  <artifactId>ph-fonts-roboto</artifactId>
+  <artifactId>ph-fonts-test</artifactId>
   <packaging>bundle</packaging>
-  <name>ph-fonts-roboto</name>
-  <description>roboto font</description>
-  <url>https://github.com/phax/ph-fonts/ph-fonts-roboto</url>
-  <inceptionYear>2014</inceptionYear>
+  <name>ph-fonts-test</name>
+  <description>ph-fonts test support</description>
+  <url>https://github.com/phax/ph-fonts/ph-fonts-test</url>
+  <inceptionYear>2024</inceptionYear>
   
   <licenses>
     <license>
@@ -53,20 +53,28 @@
     </developer>
   </developers>
   
+  <properties>
+    <pdfbox.version>3.0.3</pdfbox.version>
+  </properties>
+  
   <dependencies>
     <dependency>
       <groupId>com.helger.font</groupId>
       <artifactId>ph-fonts-api</artifactId>
     </dependency>
+    <dependency>
+      <groupId>org.apache.pdfbox</groupId>
+      <artifactId>pdfbox</artifactId>
+      <version>${pdfbox.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
     
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.helger.font</groupId>
-      <artifactId>ph-fonts-test</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -78,11 +86,9 @@
         <artifactId>maven-bundle-plugin</artifactId>
         <configuration>
           <instructions>
-            <Automatic-Module-Name>com.helger.font.roboto</Automatic-Module-Name>
-            <Export-Package>com.helger.font.roboto.*</Export-Package>
+            <Automatic-Module-Name>com.helger.font.test</Automatic-Module-Name>
+            <Export-Package>com.helger.font.test.*</Export-Package>
             <Import-Package>!javax.annotation.*,*</Import-Package>
-            <Require-Capability>osgi.extender; filter:="(osgi.extender=osgi.serviceloader.registrar)"</Require-Capability>
-            <Provide-Capability>osgi.serviceloader; osgi.serviceloader=com.helger.font.api.IFontResourceProviderSPI</Provide-Capability>
           </instructions>
         </configuration>
       </plugin>

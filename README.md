@@ -46,6 +46,10 @@ Should be quite self explanatory.
 
 # News and noteworthy
 
+* v5.0.3 - 2023-09-19
+    * Reverted to the `Anaheim` TTF from v5.0.1 as the new TTF was not compatible with PDFBox
+    * Added unit tests to make sure all contained TTFs/OTFs are processable by PDFBox to avoid such error in the future
+    * Created the new internal test-only submodule `ph-fonts-test` for the specific tests 
 * v5.0.2 - 2023-09-17
     * Added support for `Kurinto Sans` and `Kurinto Mono`. See [#3](https://github.com/phax/ph-fonts/issues/3) - thx @erdincay
     * Updated `Anaheim` TTFs

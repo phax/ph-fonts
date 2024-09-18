@@ -22,6 +22,7 @@ import org.junit.Test;
 
 import com.helger.commons.collection.impl.CommonsHashSet;
 import com.helger.commons.collection.impl.ICommonsSet;
+import com.helger.font.test.FontTester;
 
 /**
  * Test class for class {@link EFontResourceAlegreyaSans}.
@@ -33,11 +34,13 @@ public final class EFontResourceAlegreyaSansTest
   @Test
   public void testBasic ()
   {
-    final ICommonsSet <String> aUniquePaths = new CommonsHashSet<> ();
+    final ICommonsSet <String> aUniquePaths = new CommonsHashSet <> ();
     for (final EFontResourceAlegreyaSans e : EFontResourceAlegreyaSans.values ())
     {
       assertTrue (e.name (), e.getFontResource ().getResource ().exists ());
       assertTrue (e.name (), aUniquePaths.add (e.getFontResource ().getResource ().getPath ()));
+
+      FontTester.testFontResourcePDFBoxCompatibility (e.getFontResource ());
     }
   }
 }

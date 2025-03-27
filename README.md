@@ -49,6 +49,7 @@ Should be quite self explanatory.
 
 * v5.0.4 - 2025-03-27
     * Added new font `Noto Sans TC` for Traditional Chinese characters. See [#4](https://github.com/phax/ph-fonts/issues/4) - thx @paoyuan
+    * Updated `Anaheim` TTFs
 * v5.0.3 - 2024-09-18
     * Reverted to the `Anaheim` TTF from v5.0.1 as the new TTF was not compatible with PDFBox
     * Added unit tests to make sure all contained TTFs/OTFs are processable by PDFBox to avoid such error in the future

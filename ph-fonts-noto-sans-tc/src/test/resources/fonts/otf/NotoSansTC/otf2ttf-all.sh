@@ -1,5 +1,6 @@
+#!/bin/sh
 #
-# Copyright (C) 2020-2025 Philip Helger (www.helger.com)
+# Copyright (C) 2025 Philip Helger (www.helger.com)
 # philip[at]helger[dot]com
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +16,6 @@
 # limitations under the License.
 #
 
-#!/bin/sh
 
 # Make sure the base tool is up to date
 # Source: https://github.com/awesometoolbox/otf2ttf

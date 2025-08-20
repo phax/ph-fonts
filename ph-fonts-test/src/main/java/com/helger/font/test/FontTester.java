@@ -20,16 +20,16 @@ import static org.junit.Assert.assertNotNull;
 
 import java.io.IOException;
 
-import javax.annotation.Nonnull;
-import javax.annotation.concurrent.Immutable;
-
 import org.apache.fontbox.ttf.OTFParser;
 import org.apache.fontbox.ttf.TTFParser;
 import org.apache.pdfbox.io.RandomAccessReadBuffer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.helger.annotation.concurrent.Immutable;
 import com.helger.font.api.IFontResource;
+
+import jakarta.annotation.Nonnull;
 
 /**
  * Font tester

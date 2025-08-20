@@ -16,12 +16,12 @@
  */
 package com.helger.font.open_sans;
 
-import javax.annotation.Nonnull;
-
-import com.helger.commons.annotation.IsSPIImplementation;
-import com.helger.commons.collection.impl.CommonsArrayList;
+import com.helger.annotation.style.IsSPIImplementation;
+import com.helger.collection.commons.CommonsArrayList;
 import com.helger.font.api.IFontResource;
 import com.helger.font.api.IFontResourceProviderSPI;
+
+import jakarta.annotation.Nonnull;
 
 /**
  * The implementation of {@link IFontResourceProviderSPI} for this project.

@@ -18,23 +18,22 @@ package com.helger.font.api;
 
 import java.util.function.Predicate;
 
-import javax.annotation.Nonnegative;
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import javax.annotation.concurrent.GuardedBy;
-import javax.annotation.concurrent.ThreadSafe;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.CollectionHelper;
-import com.helger.commons.collection.impl.CommonsLinkedHashSet;
-import com.helger.commons.collection.impl.ICommonsOrderedSet;
-import com.helger.commons.concurrent.SimpleReadWriteLock;
-import com.helger.commons.lang.ClassLoaderHelper;
-import com.helger.commons.lang.ServiceLoaderHelper;
-import com.helger.commons.string.StringHelper;
+import com.helger.annotation.Nonnegative;
+import com.helger.annotation.concurrent.GuardedBy;
+import com.helger.annotation.concurrent.ThreadSafe;
+import com.helger.annotation.style.ReturnsMutableCopy;
+import com.helger.base.classloader.ClassLoaderHelper;
+import com.helger.base.concurrent.SimpleReadWriteLock;
+import com.helger.base.spi.ServiceLoaderHelper;
+import com.helger.base.string.StringHelper;
+import com.helger.collection.commons.CommonsLinkedHashSet;
+import com.helger.collection.commons.ICommonsOrderedSet;
+
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 
 /**
  * A global manager keeping all available {@link IFontResource} objects.
@@ -45,9 +44,9 @@ import com.helger.commons.string.StringHelper;
 public final class FontResourceManager
 {
   private static final Logger LOGGER = LoggerFactory.getLogger (FontResourceManager.class);
-  private static final SimpleReadWriteLock s_aRWLock = new SimpleReadWriteLock ();
+  private static final SimpleReadWriteLock RW_LOCK = new SimpleReadWriteLock ();
   @GuardedBy ("s_aRWLock")
-  private static final ICommonsOrderedSet <IFontResource> s_aItems = new CommonsLinkedHashSet <> ();
+  private static final ICommonsOrderedSet <IFontResource> ITEMS = new CommonsLinkedHashSet <> ();
 
   static
   {
@@ -59,12 +58,12 @@ public final class FontResourceManager
 
   public static void reInit (@Nullable final ClassLoader aClassLoader)
   {
-    s_aRWLock.writeLocked ( () -> {
+    RW_LOCK.writeLocked ( () -> {
       // Remove all existing font resources
-      s_aItems.clear ();
+      ITEMS.clear ();
 
-      final ClassLoader aRealClassLoader = aClassLoader != null ? aClassLoader
-                                                                : ClassLoaderHelper.getDefaultClassLoader ();
+      final ClassLoader aRealClassLoader = aClassLoader != null ? aClassLoader : ClassLoaderHelper
+                                                                                                  .getDefaultClassLoader ();
 
       // Load all SPI resources
       for (final IFontResourceProviderSPI aProvider : ServiceLoaderHelper.getAllSPIImplementations (IFontResourceProviderSPI.class,
@@ -72,16 +71,16 @@ public final class FontResourceManager
       {
         // Register all font resources of the current provider
         for (final IFontResource aFontResource : aProvider.getAllFontResources ())
-          if (!s_aItems.add (aFontResource))
+          if (!ITEMS.add (aFontResource))
             LOGGER.warn ("Failed to register font resource " +
                          aFontResource +
                          " because this resource is already contained!");
       }
 
-      if (s_aItems.isEmpty ())
+      if (ITEMS.isEmpty ())
         LOGGER.info ("No font resources available for registration!");
       else
-        LOGGER.info ("Successfully registered " + s_aItems.size () + " font resources!");
+        LOGGER.info ("Successfully registered " + ITEMS.size () + " font resources!");
     });
   }
 
@@ -91,26 +90,26 @@ public final class FontResourceManager
   @Nonnegative
   public static int getRegisteredResourceCount ()
   {
-    return s_aRWLock.readLockedInt (s_aItems::size);
+    return RW_LOCK.readLockedInt (ITEMS::size);
   }
 
   /**
-   * @return An ordered set with all contained font resources. Never
-   *         <code>null</code> but maybe empty.
+   * @return An ordered set with all contained font resources. Never <code>null</code> but maybe
+   *         empty.
    */
   @Nonnull
   @ReturnsMutableCopy
   public static ICommonsOrderedSet <IFontResource> getAllResources ()
   {
-    return s_aRWLock.readLockedGet (s_aItems::getClone);
+    return RW_LOCK.readLockedGet (ITEMS::getClone);
   }
 
   /**
    * @param aFilter
-   *        An optional filter to be used. May be <code>null</code> to indicate
-   *        to return all resources.
-   * @return An ordered set with all matching contained font resources. Never
-   *         <code>null</code> but maybe empty.
+   *        An optional filter to be used. May be <code>null</code> to indicate to return all
+   *        resources.
+   * @return An ordered set with all matching contained font resources. Never <code>null</code> but
+   *         maybe empty.
    */
   @Nonnull
   @ReturnsMutableCopy
@@ -119,14 +118,14 @@ public final class FontResourceManager
     if (aFilter == null)
       return getAllResources ();
 
-    return s_aRWLock.readLockedGet ( () -> CollectionHelper.newOrderedSet (s_aItems, aFilter));
+    return RW_LOCK.readLockedGet ( () -> CommonsLinkedHashSet.createFiltered (ITEMS, aFilter));
   }
 
   @Nonnull
   @ReturnsMutableCopy
   public static ICommonsOrderedSet <IFontResource> getAllResourcesOfFontType (@Nullable final String sFontName)
   {
-    if (StringHelper.hasNoText (sFontName))
+    if (StringHelper.isEmpty (sFontName))
       return new CommonsLinkedHashSet <> ();
 
     return getAllResources (f -> f.getFontName ().equals (sFontName));

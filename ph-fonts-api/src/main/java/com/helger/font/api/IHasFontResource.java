@@ -18,9 +18,9 @@ package com.helger.font.api;
 
 import java.io.Serializable;
 
-import javax.annotation.Nonnull;
+import com.helger.annotation.Nonempty;
 
-import com.helger.commons.annotation.Nonempty;
+import jakarta.annotation.Nonnull;
 
 /**
  * Base interface for objects having a font resource.

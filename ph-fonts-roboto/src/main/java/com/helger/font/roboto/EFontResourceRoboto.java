@@ -16,9 +16,7 @@
  */
 package com.helger.font.roboto;
 
-import javax.annotation.Nonnull;
-
-import com.helger.commons.annotation.Nonempty;
+import com.helger.annotation.Nonempty;
 import com.helger.font.api.EFontStyle;
 import com.helger.font.api.EFontType;
 import com.helger.font.api.EFontWeight;
@@ -27,6 +25,8 @@ import com.helger.font.api.IFontResource;
 import com.helger.font.api.IFontStyle;
 import com.helger.font.api.IFontWeight;
 import com.helger.font.api.IHasFontResource;
+
+import jakarta.annotation.Nonnull;
 
 /**
  * Defines the available font resources available in this library.

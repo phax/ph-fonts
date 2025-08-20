@@ -16,10 +16,10 @@
  */
 package com.helger.font.api;
 
-import javax.annotation.Nonnegative;
-import javax.annotation.Nullable;
+import com.helger.annotation.Nonnegative;
+import com.helger.base.lang.EnumHelper;
 
-import com.helger.commons.lang.EnumHelper;
+import jakarta.annotation.Nullable;
 
 /**
  * Weight of a font. Default values.

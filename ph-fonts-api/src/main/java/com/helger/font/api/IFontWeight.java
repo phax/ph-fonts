@@ -18,7 +18,7 @@ package com.helger.font.api;
 
 import java.io.Serializable;
 
-import javax.annotation.Nonnegative;
+import com.helger.annotation.Nonnegative;
 
 /**
  * Font weight base interface.

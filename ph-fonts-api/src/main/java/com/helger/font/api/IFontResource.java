@@ -18,12 +18,12 @@ package com.helger.font.api;
 
 import java.io.Serializable;
 
-import javax.annotation.Nonnull;
+import com.helger.annotation.Nonempty;
+import com.helger.base.id.IHasID;
+import com.helger.base.io.iface.IHasInputStream;
+import com.helger.io.resource.IReadableResource;
 
-import com.helger.commons.annotation.Nonempty;
-import com.helger.commons.id.IHasID;
-import com.helger.commons.io.IHasInputStream;
-import com.helger.commons.io.resource.IReadableResource;
+import jakarta.annotation.Nonnull;
 
 /**
  * Base interface for a single font resource.

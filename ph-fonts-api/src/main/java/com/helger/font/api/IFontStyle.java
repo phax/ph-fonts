@@ -18,7 +18,7 @@ package com.helger.font.api;
 
 import java.io.Serializable;
 
-import com.helger.commons.id.IHasID;
+import com.helger.base.id.IHasID;
 
 /**
  * Base interface for a font style.

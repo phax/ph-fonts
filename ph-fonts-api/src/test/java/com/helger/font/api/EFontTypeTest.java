@@ -21,7 +21,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.helger.commons.string.StringHelper;
+import com.helger.base.string.StringHelper;
 
 /**
  * Test class for class {@link EFontType}.
@@ -35,7 +35,7 @@ public final class EFontTypeTest
   {
     for (final EFontType e : EFontType.values ())
     {
-      assertTrue (StringHelper.hasText (e.getID ()));
+      assertTrue (StringHelper.isNotEmpty (e.getID ()));
       assertSame (e, EFontType.getFromIDOrNull (e.getID ()));
     }
   }

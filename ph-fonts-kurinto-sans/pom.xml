@@ -80,7 +80,7 @@
           <instructions>
             <Automatic-Module-Name>com.helger.font.kurinto.sans</Automatic-Module-Name>
             <Export-Package>com.helger.font.kurinto.sans.*</Export-Package>
-            <Import-Package>!javax.annotation.*,*</Import-Package>
+            <Import-Package>!jakarta.annotation.*,*</Import-Package>
             <Require-Capability>osgi.extender; filter:="(osgi.extender=osgi.serviceloader.registrar)"</Require-Capability>
             <Provide-Capability>osgi.serviceloader; osgi.serviceloader=com.helger.font.api.IFontResourceProviderSPI</Provide-Capability>
           </instructions>

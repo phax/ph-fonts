@@ -47,7 +47,7 @@ Should be quite self explanatory.
 
 # News and noteworthy
 
-v6.0.0 - work in progress
+v6.0.0 - 2025-08-24
 * Requires Java 17 as the minimum version
 * Updated to ph-commons 12.0.0
 

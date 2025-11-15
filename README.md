@@ -47,6 +47,9 @@ Should be quite self explanatory.
 
 # News and noteworthy
 
+v6.1.0 - 2025-11-16
+* Using JSpecify annotations
+
 v6.0.0 - 2025-08-24
 * Requires Java 17 as the minimum version
 * Updated to ph-commons 12.0.0

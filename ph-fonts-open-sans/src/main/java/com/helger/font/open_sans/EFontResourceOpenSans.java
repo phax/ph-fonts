@@ -16,6 +16,8 @@
  */
 package com.helger.font.open_sans;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.Nonempty;
 import com.helger.font.api.EFontStyle;
 import com.helger.font.api.EFontType;
@@ -25,8 +27,6 @@ import com.helger.font.api.IFontResource;
 import com.helger.font.api.IFontStyle;
 import com.helger.font.api.IFontWeight;
 import com.helger.font.api.IHasFontResource;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * Defines the available font resources available in this library.
@@ -89,16 +89,16 @@ public enum EFontResourceOpenSans implements IHasFontResource
 
   private final FontResource m_aRes;
 
-  EFontResourceOpenSans (@Nonnull @Nonempty final String sFontName,
-                         @Nonnull final EFontType eFontType,
-                         @Nonnull final IFontStyle aFontStyle,
-                         @Nonnull final IFontWeight aFontWeight,
-                         @Nonnull @Nonempty final String sPath)
+  EFontResourceOpenSans (@NonNull @Nonempty final String sFontName,
+                         @NonNull final EFontType eFontType,
+                         @NonNull final IFontStyle aFontStyle,
+                         @NonNull final IFontWeight aFontWeight,
+                         @NonNull @Nonempty final String sPath)
   {
     m_aRes = new FontResource (sFontName, eFontType, aFontStyle, aFontWeight, sPath);
   }
 
-  @Nonnull
+  @NonNull
   public IFontResource getFontResource ()
   {
     return m_aRes;

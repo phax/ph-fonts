@@ -16,11 +16,11 @@
  */
 package com.helger.font.api;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import com.helger.annotation.Nonempty;
 import com.helger.base.lang.EnumHelper;
-
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 
 /**
  * Predefined font styles.
@@ -36,12 +36,12 @@ public enum EFontStyle implements IFontStyle
 
   private final String m_sID;
 
-  EFontStyle (@Nonnull @Nonempty final String sID)
+  EFontStyle (@NonNull @Nonempty final String sID)
   {
     m_sID = sID;
   }
 
-  @Nonnull
+  @NonNull
   @Nonempty
   public String getID ()
   {

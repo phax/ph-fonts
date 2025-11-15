@@ -23,13 +23,12 @@ import java.io.IOException;
 import org.apache.fontbox.ttf.OTFParser;
 import org.apache.fontbox.ttf.TTFParser;
 import org.apache.pdfbox.io.RandomAccessReadBuffer;
+import org.jspecify.annotations.NonNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.font.api.IFontResource;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * Font tester
@@ -44,7 +43,7 @@ public final class FontTester
   private FontTester ()
   {}
 
-  public static void testFontResourcePDFBoxCompatibility (@Nonnull final IFontResource aFontResource)
+  public static void testFontResourcePDFBoxCompatibility (@NonNull final IFontResource aFontResource)
   {
     assertNotNull (aFontResource);
 

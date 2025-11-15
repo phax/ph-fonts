@@ -18,13 +18,13 @@ package com.helger.font.api;
 
 import java.io.InputStream;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.Nonempty;
 import com.helger.base.enforce.ValueEnforcer;
 import com.helger.base.hashcode.HashCodeGenerator;
 import com.helger.base.tostring.ToStringGenerator;
 import com.helger.io.resource.ClassPathResource;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * The default implementation of {@link IFontResource}.
@@ -40,11 +40,11 @@ public class FontResource implements IFontResource
   private final IFontWeight m_aFontWeight;
   private final String m_sPath;
 
-  public FontResource (@Nonnull @Nonempty final String sFontName,
-                       @Nonnull final EFontType eFontType,
-                       @Nonnull final IFontStyle aFontStyle,
-                       @Nonnull final IFontWeight aFontWeight,
-                       @Nonnull @Nonempty final String sPath)
+  public FontResource (@NonNull @Nonempty final String sFontName,
+                       @NonNull final EFontType eFontType,
+                       @NonNull final IFontStyle aFontStyle,
+                       @NonNull final IFontWeight aFontWeight,
+                       @NonNull @Nonempty final String sPath)
   {
     m_sFontName = ValueEnforcer.notEmpty (sFontName, "FontName");
     m_eFontType = ValueEnforcer.notNull (eFontType, "FontType");
@@ -54,52 +54,52 @@ public class FontResource implements IFontResource
     m_sID = sFontName + ":" + eFontType.getID () + ":" + aFontStyle.getID () + ":" + aFontWeight.getWeight ();
   }
 
-  @Nonnull
+  @NonNull
   @Nonempty
   public String getID ()
   {
     return m_sID;
   }
 
-  @Nonnull
+  @NonNull
   @Nonempty
   public String getFontName ()
   {
     return m_sFontName;
   }
 
-  @Nonnull
+  @NonNull
   public EFontType getFontType ()
   {
     return m_eFontType;
   }
 
-  @Nonnull
+  @NonNull
   public IFontStyle getFontStyle ()
   {
     return m_aFontStyle;
   }
 
-  @Nonnull
+  @NonNull
   public IFontWeight getFontWeight ()
   {
     return m_aFontWeight;
   }
 
-  @Nonnull
+  @NonNull
   @Nonempty
   public String getPath ()
   {
     return m_sPath;
   }
 
-  @Nonnull
+  @NonNull
   public ClassPathResource getResource ()
   {
     return new ClassPathResource (m_sPath);
   }
 
-  @Nonnull
+  @NonNull
   public InputStream getInputStream ()
   {
     return ClassPathResource.getInputStream (m_sPath);

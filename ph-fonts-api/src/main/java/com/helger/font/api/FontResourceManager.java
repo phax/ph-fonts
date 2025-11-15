@@ -18,6 +18,8 @@ package com.helger.font.api;
 
 import java.util.function.Predicate;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,9 +33,6 @@ import com.helger.base.spi.ServiceLoaderHelper;
 import com.helger.base.string.StringHelper;
 import com.helger.collection.commons.CommonsLinkedHashSet;
 import com.helger.collection.commons.ICommonsOrderedSet;
-
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 
 /**
  * A global manager keeping all available {@link IFontResource} objects.
@@ -97,7 +96,7 @@ public final class FontResourceManager
    * @return An ordered set with all contained font resources. Never <code>null</code> but maybe
    *         empty.
    */
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsOrderedSet <IFontResource> getAllResources ()
   {
@@ -111,7 +110,7 @@ public final class FontResourceManager
    * @return An ordered set with all matching contained font resources. Never <code>null</code> but
    *         maybe empty.
    */
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsOrderedSet <IFontResource> getAllResources (@Nullable final Predicate <? super IFontResource> aFilter)
   {
@@ -121,7 +120,7 @@ public final class FontResourceManager
     return RW_LOCK.readLockedGet ( () -> CommonsLinkedHashSet.createFiltered (ITEMS, aFilter));
   }
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsOrderedSet <IFontResource> getAllResourcesOfFontType (@Nullable final String sFontName)
   {
@@ -131,7 +130,7 @@ public final class FontResourceManager
     return getAllResources (f -> f.getFontName ().equals (sFontName));
   }
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsOrderedSet <IFontResource> getAllResourcesOfFontType (@Nullable final EFontType eFontType)
   {
@@ -141,7 +140,7 @@ public final class FontResourceManager
     return getAllResources (f -> f.getFontType ().equals (eFontType));
   }
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsOrderedSet <IFontResource> getAllResourcesOfFontWeight (@Nullable final IFontWeight aFontWeight)
   {

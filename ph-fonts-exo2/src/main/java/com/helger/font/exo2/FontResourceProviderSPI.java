@@ -16,12 +16,12 @@
  */
 package com.helger.font.exo2;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.style.IsSPIImplementation;
 import com.helger.collection.commons.CommonsArrayList;
 import com.helger.font.api.IFontResource;
 import com.helger.font.api.IFontResourceProviderSPI;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * The implementation of {@link IFontResourceProviderSPI} for this project.
@@ -31,7 +31,7 @@ import jakarta.annotation.Nonnull;
 @IsSPIImplementation
 public final class FontResourceProviderSPI implements IFontResourceProviderSPI
 {
-  @Nonnull
+  @NonNull
   public Iterable <? extends IFontResource> getAllFontResources ()
   {
     return new CommonsArrayList <> (EFontResourceExo2.values (), EFontResourceExo2::getFontResource);

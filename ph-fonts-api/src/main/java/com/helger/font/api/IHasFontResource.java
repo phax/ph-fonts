@@ -18,9 +18,9 @@ package com.helger.font.api;
 
 import java.io.Serializable;
 
-import com.helger.annotation.Nonempty;
+import org.jspecify.annotations.NonNull;
 
-import jakarta.annotation.Nonnull;
+import com.helger.annotation.Nonempty;
 
 /**
  * Base interface for objects having a font resource.
@@ -32,14 +32,14 @@ public interface IHasFontResource extends Serializable
   /**
    * @return The underlying font resource. Never <code>null</code>.
    */
-  @Nonnull
+  @NonNull
   IFontResource getFontResource ();
 
   /**
    * @return The ID of the underlying font resource. Never <code>null</code> nor
    *         empty.
    */
-  @Nonnull
+  @NonNull
   @Nonempty
   default String getFontResourceID ()
   {

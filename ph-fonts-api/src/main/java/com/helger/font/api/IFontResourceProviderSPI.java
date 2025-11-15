@@ -16,9 +16,9 @@
  */
 package com.helger.font.api;
 
-import com.helger.annotation.style.IsSPIInterface;
+import org.jspecify.annotations.NonNull;
 
-import jakarta.annotation.Nonnull;
+import com.helger.annotation.style.IsSPIInterface;
 
 /**
  * SPI interface to load custom font resources.
@@ -32,6 +32,6 @@ public interface IFontResourceProviderSPI
    * @return All font resources available in the current project. May not be
    *         <code>null</code> but maybe empty.
    */
-  @Nonnull
+  @NonNull
   Iterable <? extends IFontResource> getAllFontResources ();
 }

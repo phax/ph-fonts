@@ -18,12 +18,12 @@ package com.helger.font.api;
 
 import java.io.Serializable;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.Nonempty;
 import com.helger.base.id.IHasID;
 import com.helger.base.io.iface.IHasInputStream;
 import com.helger.io.resource.IReadableResource;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * Base interface for a single font resource.
@@ -35,33 +35,33 @@ public interface IFontResource extends IHasID <String>, IHasInputStream, Seriali
   /**
    * @return The overall font name.
    */
-  @Nonnull
+  @NonNull
   @Nonempty
   String getFontName ();
 
   /**
    * @return The type of font (otf, ttf, ...)
    */
-  @Nonnull
+  @NonNull
   EFontType getFontType ();
 
   /**
    * @return The font style (combination of regular, bold and italic)
    */
-  @Nonnull
+  @NonNull
   IFontStyle getFontStyle ();
 
   /**
    * @return The overall font weight.
    */
-  @Nonnull
+  @NonNull
   IFontWeight getFontWeight ();
 
   /**
    * @return The path to the font resource. May be classpath relative or an
    *         absolute path.
    */
-  @Nonnull
+  @NonNull
   @Nonempty
   String getPath ();
 
@@ -69,6 +69,6 @@ public interface IFontResource extends IHasID <String>, IHasInputStream, Seriali
    * @return The readable resource to read the specified font resource. Never
    *         <code>null</code>.
    */
-  @Nonnull
+  @NonNull
   IReadableResource getResource ();
 }

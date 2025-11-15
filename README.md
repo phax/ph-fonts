@@ -27,20 +27,20 @@ Add the following to your pom.xml to use this project, replacing `x.y.z` with th
 Note: prior to v4.1.0 the Maven groupId was `com.helger`.
 
 Available artefacts including the fonts are:
-  * ph-fonts-alegreya-sans
-  * ph-fonts-anaheim
-  * ph-fonts-exo2
-  * ph-fonts-lato2
-  * ph-fonts-kurinto-mono (since v5.0.2)
-  * ph-fonts-kurinto-sans (since v5.0.2)
-  * ph-fonts-markazi (since v4.1.1)
-  * ph-fonts-noto-sans-hk (since v4.1.2)
-  * ph-fonts-noto-sans-sc (since v4.1.2)
-  * ph-fonts-noto-sans-tc (since v5.0.4)
-  * ph-fonts-open-sans
-  * ph-fonts-roboto
-  * ph-fonts-source-sans-pro (since v4.0.1)
-  * ph-fonts-source-sans3 (since v5.0.2)
+* ph-fonts-alegreya-sans
+* ph-fonts-anaheim
+* ph-fonts-exo2
+* ph-fonts-lato2
+* ph-fonts-kurinto-mono (since v5.0.2)
+* ph-fonts-kurinto-sans (since v5.0.2)
+* ph-fonts-markazi (since v4.1.1)
+* ph-fonts-noto-sans-hk (since v4.1.2)
+* ph-fonts-noto-sans-sc (since v4.1.2)
+* ph-fonts-noto-sans-tc (since v5.0.4)
+* ph-fonts-open-sans
+* ph-fonts-roboto
+* ph-fonts-source-sans-pro (since v4.0.1)
+* ph-fonts-source-sans3 (since v5.0.2)
 
 To add a different font using ph-fonts-api just use one of the above mentioned projects.
 Should be quite self explanatory.
@@ -48,6 +48,7 @@ Should be quite self explanatory.
 # News and noteworthy
 
 v6.1.0 - 2025-11-16
+* Updated to ph-commons 12.1.0
 * Using JSpecify annotations
 
 v6.0.0 - 2025-08-24

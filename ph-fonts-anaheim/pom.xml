@@ -25,12 +25,11 @@
     <version>6.1.1-SNAPSHOT</version>
   </parent>
   <artifactId>ph-fonts-anaheim</artifactId>
-  <packaging>bundle</packaging>
+  <packaging>jar</packaging>
   <name>ph-fonts-anaheim</name>
   <description>Anaheim font</description>
   <url>https://github.com/phax/ph-fonts/ph-fonts-anaheim</url>
   <inceptionYear>2014</inceptionYear>
-  
   <licenses>
     <license>
       <name>Apache 2</name>
@@ -38,12 +37,10 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-  
   <organization>
     <name>Philip Helger</name>
     <url>http://www.helger.com</url>
   </organization>
-  
   <developers>
     <developer>
       <id>philip</id>
@@ -52,13 +49,11 @@
       <url>http://www.helger.com</url>
     </developer>
   </developers>
-  
   <dependencies>
     <dependency>
       <groupId>com.helger.font</groupId>
       <artifactId>ph-fonts-api</artifactId>
     </dependency>
-    
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
@@ -70,22 +65,4 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <configuration>
-          <instructions>
-            <Automatic-Module-Name>com.helger.font.anaheim</Automatic-Module-Name>
-            <Export-Package>com.helger.font.anaheim.*</Export-Package>
-            <Import-Package>!org.jspecify.annotations.*,*</Import-Package>
-            <Require-Capability>osgi.extender; filter:="(osgi.extender=osgi.serviceloader.registrar)"</Require-Capability>
-            <Provide-Capability>osgi.serviceloader; osgi.serviceloader=com.helger.font.api.IFontResourceProviderSPI</Provide-Capability>
-          </instructions>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 </project>

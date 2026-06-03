@@ -3,6 +3,8 @@
 <!-- ph-badge-start -->
 [![Sonatype Central](https://maven-badges.sml.io/sonatype-central/com.helger.font/ph-fonts-parent-pom/badge.svg)](https://maven-badges.sml.io/sonatype-central/com.helger.font/ph-fonts-parent-pom/)
 [![javadoc](https://javadoc.io/badge2/com.helger.font/ph-fonts-api/javadoc.svg)](https://javadoc.io/doc/com.helger.font/ph-fonts-api)
+
+> If this project saved you some time or made your day a little easier, a star would mean a lot — it helps others find it too.
 <!-- ph-badge-end -->
 
 A set of TTF/OTF OSS fonts to be used in PDF creation or any other use case.

@@ -30,17 +30,20 @@
   <description>ph-fonts test support</description>
   <url>https://github.com/phax/ph-fonts/ph-fonts-test</url>
   <inceptionYear>2024</inceptionYear>
+  
   <licenses>
     <license>
       <name>Apache 2</name>
       <url>http://www.apache.org/licenses/LICENSE-2.0</url>
       <distribution>repo</distribution>
     </license>
+  
   </licenses>
   <organization>
     <name>Philip Helger</name>
     <url>http://www.helger.com</url>
   </organization>
+  
   <developers>
     <developer>
       <id>philip</id>
@@ -49,9 +52,11 @@
       <url>http://www.helger.com</url>
     </developer>
   </developers>
+  
   <properties>
-    <pdfbox.version>3.0.7</pdfbox.version>
+    <pdfbox.version>3.0.8</pdfbox.version>
   </properties>
+  
   <dependencies>
     <dependency>
       <groupId>com.helger.font</groupId>
@@ -66,6 +71,7 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
     </dependency>
+    
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>

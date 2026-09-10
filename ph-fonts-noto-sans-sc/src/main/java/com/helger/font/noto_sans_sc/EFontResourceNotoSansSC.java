@@ -36,16 +36,36 @@ import com.helger.font.api.IHasFontResource;
 public enum EFontResourceNotoSansSC implements IHasFontResource
 {
   // Noto Sans SC (Open Font License)
-  NOTO_SANS_SC_THIN ("Noto Sans SC", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/ttf/NotoSansSC/NotoSansSC-Thin.ttf"),
-  NOTO_SANS_SC_LIGHT ("Noto Sans SC", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.LIGHT, "fonts/ttf/NotoSansSC/NotoSansSC-Light.ttf"),
+  NOTO_SANS_SC_THIN ("Noto Sans SC",
+                     EFontType.TTF,
+                     EFontStyle.REGULAR,
+                     EFontWeight.THIN,
+                     "fonts/ttf/NotoSansSC/NotoSansSC-Thin.ttf"),
+  NOTO_SANS_SC_LIGHT ("Noto Sans SC",
+                      EFontType.TTF,
+                      EFontStyle.REGULAR,
+                      EFontWeight.LIGHT,
+                      "fonts/ttf/NotoSansSC/NotoSansSC-Light.ttf"),
   NOTO_SANS_SC_REGULAR ("Noto Sans SC",
                         EFontType.TTF,
                         EFontStyle.REGULAR,
                         EFontWeight.REGULAR,
                         "fonts/ttf/NotoSansSC/NotoSansSC-Regular.ttf"),
-  NOTO_SANS_SC_MEDIUM ("Noto Sans SC", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.MEDIUM, "fonts/ttf/NotoSansSC/NotoSansSC-Medium.ttf"),
-  NOTO_SANS_SC_BOLD ("Noto Sans SC", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BOLD, "fonts/ttf/NotoSansSC/NotoSansSC-Bold.ttf"),
-  NOTO_SANS_SC_BLACK ("Noto Sans SC", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BLACK, "fonts/ttf/NotoSansSC/NotoSansSC-Black.ttf");
+  NOTO_SANS_SC_MEDIUM ("Noto Sans SC",
+                       EFontType.TTF,
+                       EFontStyle.REGULAR,
+                       EFontWeight.MEDIUM,
+                       "fonts/ttf/NotoSansSC/NotoSansSC-Medium.ttf"),
+  NOTO_SANS_SC_BOLD ("Noto Sans SC",
+                     EFontType.TTF,
+                     EFontStyle.REGULAR,
+                     EFontWeight.BOLD,
+                     "fonts/ttf/NotoSansSC/NotoSansSC-Bold.ttf"),
+  NOTO_SANS_SC_BLACK ("Noto Sans SC",
+                      EFontType.TTF,
+                      EFontStyle.REGULAR,
+                      EFontWeight.BLACK,
+                      "fonts/ttf/NotoSansSC/NotoSansSC-Black.ttf");
 
   private final FontResource m_aRes;
 

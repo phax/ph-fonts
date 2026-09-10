@@ -36,14 +36,26 @@ import com.helger.font.api.IHasFontResource;
 public enum EFontResourceMarkazi implements IHasFontResource
 {
   // Markazi (Open Font License)
-  MARKAZI_NORMAL ("Markazi Text", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.REGULAR, "fonts/ttf/Markazi/MarkaziText-Regular.ttf"),
-  MARKAZI_MEDIUM ("Markazi Text", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.MEDIUM, "fonts/ttf/Markazi/MarkaziText-Medium.ttf"),
+  MARKAZI_NORMAL ("Markazi Text",
+                  EFontType.TTF,
+                  EFontStyle.REGULAR,
+                  EFontWeight.REGULAR,
+                  "fonts/ttf/Markazi/MarkaziText-Regular.ttf"),
+  MARKAZI_MEDIUM ("Markazi Text",
+                  EFontType.TTF,
+                  EFontStyle.REGULAR,
+                  EFontWeight.MEDIUM,
+                  "fonts/ttf/Markazi/MarkaziText-Medium.ttf"),
   MARKAZI_SEMI_BOLD ("Markazi Text",
                      EFontType.TTF,
                      EFontStyle.REGULAR,
                      EFontWeight.SEMI_BOLD,
                      "fonts/ttf/Markazi/MarkaziText-SemiBold.ttf"),
-  MARKAZI_BOLD ("Markazi Text", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BOLD, "fonts/ttf/Markazi/MarkaziText-Bold.ttf");
+  MARKAZI_BOLD ("Markazi Text",
+                EFontType.TTF,
+                EFontStyle.REGULAR,
+                EFontWeight.BOLD,
+                "fonts/ttf/Markazi/MarkaziText-Bold.ttf");
 
   private final FontResource m_aRes;
 

@@ -59,7 +59,8 @@ public enum EFontWeight implements IFontWeight
   }
 
   @Nullable
-  public static EFontWeight getFromWeightOrDefault (@Nonnegative final int nWeight, @Nullable final EFontWeight eDefault)
+  public static EFontWeight getFromWeightOrDefault (@Nonnegative final int nWeight,
+                                                    @Nullable final EFontWeight eDefault)
   {
     return EnumHelper.findFirst (EFontWeight.class, x -> x.getWeight () == nWeight, eDefault);
   }

@@ -29,8 +29,8 @@ import com.helger.annotation.style.IsSPIInterface;
 public interface IFontResourceProviderSPI
 {
   /**
-   * @return All font resources available in the current project. May not be
-   *         <code>null</code> but maybe empty.
+   * @return All font resources available in the current project. May not be <code>null</code> but
+   *         maybe empty.
    */
   @NonNull
   Iterable <? extends IFontResource> getAllFontResources ();

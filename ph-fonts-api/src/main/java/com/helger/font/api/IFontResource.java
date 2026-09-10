@@ -58,16 +58,14 @@ public interface IFontResource extends IHasID <String>, IHasInputStream, Seriali
   IFontWeight getFontWeight ();
 
   /**
-   * @return The path to the font resource. May be classpath relative or an
-   *         absolute path.
+   * @return The path to the font resource. May be classpath relative or an absolute path.
    */
   @NonNull
   @Nonempty
   String getPath ();
 
   /**
-   * @return The readable resource to read the specified font resource. Never
-   *         <code>null</code>.
+   * @return The readable resource to read the specified font resource. Never <code>null</code>.
    */
   @NonNull
   IReadableResource getResource ();

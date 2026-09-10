@@ -28,8 +28,8 @@ import com.helger.base.id.IHasID;
 public interface IFontStyle extends IHasID <String>, Serializable
 {
   /**
-   * @return <code>true</code> if it is regular, <code>false</code> if not (if
-   *         it is bold or italic).
+   * @return <code>true</code> if it is regular, <code>false</code> if not (if it is bold or
+   *         italic).
    */
   boolean isRegular ();
 

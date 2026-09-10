@@ -36,7 +36,11 @@ import com.helger.font.api.IHasFontResource;
 public enum EFontResourceAlegreyaSans implements IHasFontResource
 {
   // Alegreya Sans (SIL Open Font License, 1.1)
-  ALGREYA_SANS_THIN ("Alegreya Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.THIN, "fonts/ttf/AlegreyaSans/AlegreyaSans-Thin.ttf"),
+  ALGREYA_SANS_THIN ("Alegreya Sans",
+                     EFontType.TTF,
+                     EFontStyle.REGULAR,
+                     EFontWeight.THIN,
+                     "fonts/ttf/AlegreyaSans/AlegreyaSans-Thin.ttf"),
   ALGREYA_SANS_THIN_ITALIC ("Alegreya Sans",
                             EFontType.TTF,
                             EFontStyle.ITALIC,
@@ -72,7 +76,11 @@ public enum EFontResourceAlegreyaSans implements IHasFontResource
                               EFontStyle.ITALIC,
                               EFontWeight.MEDIUM,
                               "fonts/ttf/AlegreyaSans/AlegreyaSans-MediumItalic.ttf"),
-  ALGREYA_SANS_BOLD ("Alegreya Sans", EFontType.TTF, EFontStyle.REGULAR, EFontWeight.BOLD, "fonts/ttf/AlegreyaSans/AlegreyaSans-Bold.ttf"),
+  ALGREYA_SANS_BOLD ("Alegreya Sans",
+                     EFontType.TTF,
+                     EFontStyle.REGULAR,
+                     EFontWeight.BOLD,
+                     "fonts/ttf/AlegreyaSans/AlegreyaSans-Bold.ttf"),
   ALGREYA_SANS_BOLD_ITALIC ("Alegreya Sans",
                             EFontType.TTF,
                             EFontStyle.ITALIC,

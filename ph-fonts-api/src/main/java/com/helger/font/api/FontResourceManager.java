@@ -57,12 +57,12 @@ public final class FontResourceManager
 
   public static void reInit (@Nullable final ClassLoader aClassLoader)
   {
-    RW_LOCK.writeLocked ( () -> {
+    RW_LOCK.writeLocked (() -> {
       // Remove all existing font resources
       ITEMS.clear ();
 
-      final ClassLoader aRealClassLoader = aClassLoader != null ? aClassLoader : ClassLoaderHelper
-                                                                                                  .getDefaultClassLoader ();
+      final ClassLoader aRealClassLoader = aClassLoader != null ? aClassLoader
+                                                                : ClassLoaderHelper.getDefaultClassLoader ();
 
       // Load all SPI resources
       for (final IFontResourceProviderSPI aProvider : ServiceLoaderHelper.getAllSPIImplementations (IFontResourceProviderSPI.class,
@@ -117,7 +117,7 @@ public final class FontResourceManager
     if (aFilter == null)
       return getAllResources ();
 
-    return RW_LOCK.readLockedGet ( () -> CommonsLinkedHashSet.createFiltered (ITEMS, aFilter));
+    return RW_LOCK.readLockedGet (() -> CommonsLinkedHashSet.createFiltered (ITEMS, aFilter));
   }
 
   @NonNull

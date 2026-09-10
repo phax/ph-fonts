@@ -36,8 +36,7 @@ public interface IHasFontResource extends Serializable
   IFontResource getFontResource ();
 
   /**
-   * @return The ID of the underlying font resource. Never <code>null</code> nor
-   *         empty.
+   * @return The ID of the underlying font resource. Never <code>null</code> nor empty.
    */
   @NonNull
   @Nonempty

@@ -198,4 +198,22 @@
     <module>ph-fonts-source-sans-pro</module>
     <module>ph-fonts-source-sans3</module>
   </modules>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <!-- Do not deploy the test sources. They only contain the OTF variants of the
+               Noto Sans fonts, which made up ~98 of the 331 MB of the Maven Central bundle,
+               while the same fonts are already shipped as TTF in the main artifacts. -->
+          <execution>
+            <id>attach-test-sources</id>
+            <phase>none</phase>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>

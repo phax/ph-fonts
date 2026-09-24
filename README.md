@@ -56,6 +56,7 @@ Should be quite self explanatory.
 
 v6.1.1 - work in progress
 * Removed OSGI bundling
+* The test sources are no longer published to Maven Central. They only contained the OTF variants of the Noto Sans fonts, which are also shipped as TTF in the respective main artifacts
 
 v6.1.0 - 2025-11-16
 * Updated to ph-commons 12.1.0

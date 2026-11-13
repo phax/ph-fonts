@@ -54,9 +54,11 @@ Should be quite self explanatory.
 
 # News and noteworthy
 
-v6.1.1 - work in progress
+v6.1.1 - 2026-11-13
 * Removed OSGI bundling
-* The test sources are no longer published to Maven Central. They only contained the OTF variants of the Noto Sans fonts, which are also shipped as TTF in the respective main artifacts
+* The test sources are no longer published to Maven Central.
+  They only contained the OTF variants of the Noto Sans fonts, which are also shipped as TTF in the respective main artifacts
+* Added new submodule `ph-fonts-bom` as a Bill of Materials for all ph-fonts artifacts
 
 v6.1.0 - 2025-11-16
 * Updated to ph-commons 12.1.0

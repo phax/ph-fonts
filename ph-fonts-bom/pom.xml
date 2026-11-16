@@ -40,12 +40,6 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-  <scm>
-    <connection>scm:git:https://github.com/phax/ph-fonts.git</connection>
-    <developerConnection>scm:git:https://github.com/phax/ph-fonts.git</developerConnection>
-    <url>http://github.com/phax/ph-fonts</url>
-    <tag>HEAD</tag>
-  </scm>
   <organization>
     <name>Philip Helger</name>
     <url>http://www.helger.com</url>
